@@ -32,6 +32,14 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));
 
+    public static final DeferredBlock<Block> GAS_PIPE = registerBlock("gas_pipe",
+            () -> new GasPipeBlock(BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.COPPER)));
+
+
+
 
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
         ModItems.ITEMS.register(name,

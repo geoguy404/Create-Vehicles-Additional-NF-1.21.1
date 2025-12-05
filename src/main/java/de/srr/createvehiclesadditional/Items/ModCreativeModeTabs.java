@@ -28,6 +28,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CARBON_ALLOY);
                         output.accept(ModItems.CARBON_SHEET);
                         output.accept(ModItems.CARBON_FIBER_MASS);
+                        output.accept(ModBlocks.GAS_PIPE);
                     }).build());
 
 

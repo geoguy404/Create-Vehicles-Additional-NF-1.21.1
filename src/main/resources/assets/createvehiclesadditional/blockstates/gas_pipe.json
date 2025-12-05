@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "createvehiclesadditional:block/gas_pipe" },
+    "facing=south": { "model": "createvehiclesadditional:block/gas_pipe", "y": 180 },
+    "facing=west":  { "model": "createvehiclesadditional:block/gas_pipe", "y": 270 },
+    "facing=east":  { "model": "createvehiclesadditional:block/gas_pipe", "y": 90 }
+  }
+}
