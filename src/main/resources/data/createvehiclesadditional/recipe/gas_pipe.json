@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "createvehiclesadditional:carbon_sheet"
+    },
+    "X": {
+      "item": "createvehiclesadditional:carbon_alloy"
+    }
+  },
+  "pattern": [
+    "#X#"
+              ],
+  "result": {
+    "count": 1,
+    "id":"createvehiclesadditional:gas_pipe"
+  }
+}
