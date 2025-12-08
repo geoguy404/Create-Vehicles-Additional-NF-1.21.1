@@ -54,6 +54,48 @@ public class ModItems{
 
     );
 
+    public static final DeferredItem<Item> GAS_TANK = ITEMS.registerItem(
+            "gas_tank",
+            Item::new,
+            new Item.Properties()
+
+    );
+
+    public static final DeferredItem<Item> HYDROGEN_TANK = ITEMS.registerItem(
+            "hydrogen_tank",
+            Item::new,
+            new Item.Properties()
+
+    );
+
+    public static final DeferredItem<Item> NITROGEN_TANK = ITEMS.registerItem(
+            "nitrogen_tank",
+            Item::new,
+            new Item.Properties()
+
+    );
+
+    public static final DeferredItem<Item> OXYGEN_TANK = ITEMS.registerItem(
+            "oxygen_tank",
+            Item::new,
+            new Item.Properties()
+
+    );
+
+    public static final DeferredItem<Item> PROPYLENE_TANK = ITEMS.registerItem(
+            "propylene_tank",
+            Item::new,
+            new Item.Properties()
+
+    );
+
+    public static final DeferredItem<Item> SULFUR_TANK = ITEMS.registerItem(
+            "sulfur_tank",
+            Item::new,
+            new Item.Properties()
+
+    );
+
 
 
     public static void register(IEventBus eventBus){

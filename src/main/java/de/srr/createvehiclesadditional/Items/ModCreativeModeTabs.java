@@ -19,16 +19,28 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CARBON.get()))
                     .title(Component.translatable("creativetab.createvehiclesadditional.modItems"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.CARBON);
+
+
+                        output.accept(ModBlocks.GAS_PIPE);
                         output.accept(ModBlocks.BLOCK_OF_CARBON);
                         output.accept(ModBlocks.TEMPERATURE_OVEN);
+                        output.accept(ModBlocks.CARBON_FIBER_BLOCK);
+
+
                         output.accept(ModItems.BUCKET_OF_ACRYLONITRILE);
                         output.accept(ModItems.POLYACRYLONITRILE_POWDER);
-                        output.accept(ModBlocks.CARBON_FIBER_BLOCK);
+                        output.accept(ModItems.CARBON);
                         output.accept(ModItems.CARBON_ALLOY);
                         output.accept(ModItems.CARBON_SHEET);
                         output.accept(ModItems.CARBON_FIBER_MASS);
-                        output.accept(ModBlocks.GAS_PIPE);
+                        output.accept(ModItems.GAS_TANK);
+                        output.accept(ModItems.HYDROGEN_TANK);
+                        output.accept(ModItems.NITROGEN_TANK);
+                        output.accept(ModItems.OXYGEN_TANK);
+                        output.accept(ModItems.PROPYLENE_TANK);
+                        output.accept(ModItems.SULFUR_TANK);
+
+
                     }).build());
 
 
