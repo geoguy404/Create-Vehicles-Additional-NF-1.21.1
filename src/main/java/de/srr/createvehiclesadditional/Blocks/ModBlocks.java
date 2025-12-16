@@ -40,7 +40,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> ELEMENT_SEPARATOR = registerBlock("element_separator",
             () -> new ElementSeparatorBlock(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE))); //change later
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK))); //change later
 
 
 
