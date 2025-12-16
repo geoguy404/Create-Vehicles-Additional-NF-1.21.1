@@ -23,3 +23,8 @@ Additional Resources:
 ==========
 Community Documentation: https://docs.neoforged.net/  
 NeoForged Discord: https://discord.neoforged.net/
+
+
+==========
+
+The Create Vehicles Additional Mod features a website for Documentation [Create Vehicles Additional](https://geoguy404.github.io/Create-Vehicles-Additional-NF-1.21.1/).
