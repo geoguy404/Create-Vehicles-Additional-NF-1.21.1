@@ -20,12 +20,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.BLOCK_OF_CARBON.get())
-                .add(ModBlocks.TEMPERATURE_OVEN.get())
+                //.add(ModBlocks.TEMPERATURE_OVEN.get())
                 .add(ModBlocks.CARBON_FIBER_BLOCK.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.BLOCK_OF_CARBON.get())
-                .add(ModBlocks.TEMPERATURE_OVEN.get());
+                .add(ModBlocks.BLOCK_OF_CARBON.get());
+                //.add(ModBlocks.TEMPERATURE_OVEN.get());
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.CARBON_FIBER_BLOCK.get());
 

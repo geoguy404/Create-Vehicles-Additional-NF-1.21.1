@@ -2,7 +2,6 @@ package de.srr.createvehiclesadditional.datagen;
 
 import de.srr.createvehiclesadditional.Blocks.ModBlocks;
 import de.srr.createvehiclesadditional.Items.ModItems;
-import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -17,6 +16,8 @@ import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 public class ModBlockLootTableProvider extends BlockLootSubProvider {
@@ -26,10 +27,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        dropSelf(ModBlocks.TEMPERATURE_OVEN.get());
-        dropSelf(ModBlocks.CARBON_FIBER_BLOCK.get());
-        dropSelf(ModBlocks.GAS_PIPE.get());
-        dropSelf(ModBlocks.ELEMENT_SEPARATOR.get());
+        ModBlocks.ALL_BLOCKS.forEach(blockEntry -> dropSelf(blockEntry.get()));
 
         add(ModBlocks.BLOCK_OF_CARBON.get(),
                 block -> createMultipleOreDrops(ModBlocks.BLOCK_OF_CARBON.get(), ModItems.CARBON.get(), 4, 9));
@@ -46,6 +44,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return ModBlocks.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
+        List<Block> blocks = new ArrayList<>();
+        ModBlocks.ALL_BLOCKS.forEach(e -> blocks.add(e.get()));
+        return blocks;
     }
 }

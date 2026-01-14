@@ -4,6 +4,7 @@ import com.simibubi.create.AllCreativeModeTabs;
 import de.srr.createvehiclesadditional.Blocks.ModBlocks;
 import de.srr.createvehiclesadditional.Items.ModCreativeModeTabs;
 import de.srr.createvehiclesadditional.Items.ModItems;
+import de.srr.createvehiclesadditional.registry.ModBlockEntities;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -32,6 +33,8 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import com.simibubi.create.foundation.data.CreateRegistrate;
+
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(CreateVehiclesAdditional.MOD_ID)
 public class CreateVehiclesAdditional {
@@ -39,6 +42,10 @@ public class CreateVehiclesAdditional {
     public static final String MOD_ID = "createvehiclesadditional";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
+
+    public static final CreateRegistrate REGISTRATE =
+            CreateRegistrate.create(MOD_ID);
+
     // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MOD_ID);
     // Create a Deferred Register to hold Items which will all be registered under the "examplemod" namespace
@@ -67,8 +74,9 @@ public class CreateVehiclesAdditional {
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public CreateVehiclesAdditional(IEventBus modEventBus, ModContainer modContainer) {
-        // Register the commonSetup method for modloading
-        modEventBus.addListener(this::commonSetup);
+
+        REGISTRATE.registerEventListeners(modEventBus);
+
 
         // Register the Deferred Register to the mod event bus so blocks get registered
         ModBlocks.register(modEventBus);
@@ -76,15 +84,19 @@ public class CreateVehiclesAdditional {
         ModItems.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
         ModCreativeModeTabs.register(modEventBus);
+        // Register the Deferred Register to the mod event bus so BlockEntities get registered
+        ModBlockEntities.register();
 
+
+        // Register the item to a creative tab
+        modEventBus.addListener(this::addCreative);
+        // Register the commonSetup method for modloading
+        modEventBus.addListener(this::commonSetup);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
-
-        // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -103,9 +115,9 @@ public class CreateVehiclesAdditional {
             event.accept(ModBlocks.BLOCK_OF_CARBON);
             event.accept(ModBlocks.CARBON_FIBER_BLOCK);
         }
-        if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
-            event.accept(ModBlocks.TEMPERATURE_OVEN);
-        }
+//        if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+//            event.accept(ModBlocks.TEMPERATURE_OVEN);
+//        }
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.POLYACRYLONITRILE_POWDER);
         }

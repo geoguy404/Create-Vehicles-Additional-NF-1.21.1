@@ -1,12 +1,12 @@
 {
-	"format_version": "1.21.6",
+	"format_version": "1.21.1",
 	"credit": "Made with Blockbench",
-	"parent": "block/block",
+  "parent": "minecraft:block/block",
 	"textures": {
 		"1": "createvehiclesadditional:block/element_separator",
 		"3": "createvehiclesadditional:block/window",
 		"4": "createvehiclesadditional:block/tubes",
-		"particle": "createvehiclesadditional:block/element_separator"
+		"particle": "createvehiclesadditional:block/window"
 	},
 	"elements": [
 		{

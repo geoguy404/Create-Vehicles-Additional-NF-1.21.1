@@ -20,6 +20,7 @@ import java.util.concurrent.CompletableFuture;
 public class DataGenerators {
 
 
+
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event){
         DataGenerator generator = event.getGenerator();
@@ -40,7 +41,7 @@ public class DataGenerators {
 
         generator.addProvider(event.includeClient(),new ModItemModelProvider(packOutput,existingFileHelper));
         generator.addProvider(event.includeClient(),new ModBlockstateProvider(packOutput,existingFileHelper));
-
+        generator.addProvider(event.includeClient(), new ModLangProvider(packOutput));
 
     }
 }
