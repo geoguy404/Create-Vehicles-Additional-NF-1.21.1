@@ -1,6 +1,5 @@
 package de.srr.createvehiclesadditional.Blocks;
 
-import com.simibubi.create.AllShapes;
 import de.srr.createvehiclesadditional.Blocks.Base.HorizontalRotatableBlock;
 import de.srr.createvehiclesadditional.util.ShapeUtils;
 import net.minecraft.core.BlockPos;
@@ -65,7 +64,7 @@ public class ElementSeparatorBlock extends HorizontalRotatableBlock {
     }
 
     @Override
-    public @NotNull VoxelShape getInteractionShape(BlockState state, BlockGetter level, BlockPos pos) {
+    public @NotNull VoxelShape getInteractionShape(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos) {
 
         return Block.box(0, 0, 0, 16, 16, 16);
     }
