@@ -1,2 +1,7 @@
-// 1.21.1	2025-12-03T18:10:37.7658268	Tags for minecraft:item mod id createvehiclesadditional
+// 1.21.1	2026-01-18T02:01:56.7960011	Tags for minecraft:item mod id createvehiclesadditional
 6738df2ed0a7e738c4c7d024ce9f3689a7cd77f6 data/createvehiclesadditional/tags/item/transformable_items.json
+26a5c5c37d2279d4355cd19ad048b1227e3c5269 data/minecraft/tags/item/axes.json
+81c13325d2bac2fcdd69501794cff826f5a9f109 data/minecraft/tags/item/hoes.json
+d3e26e6e902282096a911f3c9e7d1c26eaf035b2 data/minecraft/tags/item/pickaxes.json
+c78dd53dc4bf90275d06566e5f60370cedbab0b0 data/minecraft/tags/item/shovels.json
+226ebb4c025c25a33b467c62438829b1621d08ba data/minecraft/tags/item/swords.json

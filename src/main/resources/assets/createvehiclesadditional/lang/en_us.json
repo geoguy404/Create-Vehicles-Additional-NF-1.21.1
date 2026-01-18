@@ -5,6 +5,13 @@
   "item.createvehiclesadditional.carbon_alloy": "Carbon Alloy",
   "item.createvehiclesadditional.carbon_sheet": "Carbon Sheet",
   "item.createvehiclesadditional.carbon_fiber_mass": "Carbon Fiber Mass",
+  "item.createvehiclesadditional.carbon_sword": "Carbon Sword",
+  "item.createvehiclesadditional.carbon_axe": "Carbon Axe",
+  "item.createvehiclesadditional.carbon_pickaxe": "Carbon Pickaxe",
+  "item.createvehiclesadditional.carbon_hoe": "Carbon Hoe",
+  "item.createvehiclesadditional.carbon_shovel": "Carbon Shovel",
+  "item.createvehiclesadditional.forged_carbon": "Forged Carbon",
+
 
   "block.createvehiclesadditional.block_of_carbon": "Block of Carbon",
   "block.createvehiclesadditional.temperature_oven": "Temperature Oven",

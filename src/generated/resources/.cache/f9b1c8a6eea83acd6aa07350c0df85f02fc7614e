@@ -1,4 +1,6 @@
-// 1.21.1	2025-12-03T18:10:37.7633118	Tags for minecraft:block mod id createvehiclesadditional
+// 1.21.1	2026-01-18T02:01:56.7491147	Tags for minecraft:block mod id createvehiclesadditional
+e3fc5a6e2a124d3cdea0bb886e442fe1c29c7f15 data/createvehiclesadditional/tags/block/incorrect_for_carbon_tool.json
+32b13946c4cd1f944b029659ccce5fcb2adad4ff data/createvehiclesadditional/tags/block/needs_carbon_tool.json
 848174cd52742d20d3a0583564dc8c74b06c2539 data/minecraft/tags/block/mineable/pickaxe.json
 802bc2a7904406879859c412430b8f0d06119465 data/minecraft/tags/block/needs_diamond_tool.json
 184bb0ebd2ff961fafc8a2775ad4e4799a4d398a data/minecraft/tags/block/needs_iron_tool.json

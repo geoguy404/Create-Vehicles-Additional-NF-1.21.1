@@ -13,11 +13,19 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+
+        handheldItem(ModItems.CARBON_SWORD.get());
+        handheldItem(ModItems.CARBON_AXE.get());
+        handheldItem(ModItems.CARBON_PICKAXE.get());
+        handheldItem(ModItems.CARBON_HOE.get());
+        handheldItem(ModItems.CARBON_SHOVEL.get());
+
         basicItem(ModItems.CARBON.get());
         basicItem(ModItems.BUCKET_OF_ACRYLONITRILE.get());
         basicItem(ModItems.POLYACRYLONITRILE_POWDER.get());
         basicItem(ModItems.CARBON_ALLOY.get());
         basicItem(ModItems.CARBON_SHEET.get());
         basicItem(ModItems.CARBON_FIBER_MASS.get());
+        basicItem(ModItems.FORGED_CARBON.get());
     }
 }

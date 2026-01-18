@@ -2,6 +2,7 @@ package de.srr.createvehiclesadditional.datagen;
 
 import de.srr.createvehiclesadditional.Blocks.ModBlocks;
 import de.srr.createvehiclesadditional.CreateVehiclesAdditional;
+import de.srr.createvehiclesadditional.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -29,5 +30,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.CARBON_FIBER_BLOCK.get());
 
+        tag(ModTags.Blocks.NEEDS_CARBON_TOOL)
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
+
+        tag(ModTags.Blocks.INCORRECT_FOR_CARBON_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_IRON_TOOL)
+                .remove(ModTags.Blocks.NEEDS_CARBON_TOOL);
     }
 }
