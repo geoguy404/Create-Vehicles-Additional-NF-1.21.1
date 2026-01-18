@@ -1,5 +1,6 @@
 package de.srr.createvehiclesadditional.Blocks;
 
+import com.simibubi.create.content.equipment.wrench.IWrenchable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
@@ -14,7 +15,9 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
-public class GasPipeBlock extends Block {
+import java.util.Objects;
+
+public class GasPipeBlock extends Block implements IWrenchable {
 
     public static final BooleanProperty NORTH = BooleanProperty.create("north");
     public static final BooleanProperty SOUTH = BooleanProperty.create("south");
@@ -34,7 +37,6 @@ public class GasPipeBlock extends Block {
 
 
     public static final DirectionProperty FACING = BlockStateProperties.FACING;
-
 
 
     public GasPipeBlock(Properties properties) {
@@ -71,6 +73,7 @@ public class GasPipeBlock extends Block {
         return count;
     }
 
+
     private static Direction getSingleConnection(BlockState state) {
         if (state.getValue(NORTH)) return Direction.NORTH;
         if (state.getValue(SOUTH)) return Direction.SOUTH;
@@ -86,14 +89,19 @@ public class GasPipeBlock extends Block {
         BlockGetter level = ctx.getLevel();
         BlockPos pos = ctx.getClickedPos();
 
-        return this.defaultBlockState()
-                .setValue(FACING, ctx.getNearestLookingDirection())
+        BlockState state = this.defaultBlockState()
                 .setValue(NORTH, canConnectTo(level, pos, Direction.NORTH))
                 .setValue(SOUTH, canConnectTo(level, pos, Direction.SOUTH))
                 .setValue(EAST,  canConnectTo(level, pos, Direction.EAST))
                 .setValue(WEST,  canConnectTo(level, pos, Direction.WEST))
                 .setValue(UP,    canConnectTo(level, pos, Direction.UP))
-                .setValue(DOWN,  canConnectTo(level, pos, Direction.DOWN));
+                .setValue(DOWN,  canConnectTo(level, pos, Direction.DOWN))
+                .setValue(FACING, ctx.getNearestLookingDirection());
+
+        if (countConnections(state) == 1){
+            state = state.setValue(FACING, Objects.requireNonNull(getSingleConnection(state)));
+        }
+        return state;
     }
 
     @Override
@@ -103,8 +111,7 @@ public class GasPipeBlock extends Block {
 
         boolean connected = neighbourState.getBlock() instanceof GasPipeBlock;
 
-
-        return switch (direction) {
+        BlockState newState = switch (direction) {
             case NORTH -> state.setValue(NORTH, connected);
             case SOUTH -> state.setValue(SOUTH, connected);
             case EAST  -> state.setValue(EAST,  connected);
@@ -113,6 +120,11 @@ public class GasPipeBlock extends Block {
             case DOWN  -> state.setValue(DOWN,  connected);
         };
 
+
+        if (countConnections(newState) == 1){
+            newState = newState.setValue(FACING, Objects.requireNonNull(getSingleConnection(newState)));
+        }
+        return newState;
     }
 
     @Override

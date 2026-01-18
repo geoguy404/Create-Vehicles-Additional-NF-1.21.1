@@ -21,6 +21,7 @@ public class ModTags {
 
     public static class Items {
         public static final TagKey<Item> TRANSFORMABLE_ITEMS = createTag("transformable_items");
+        public static final TagKey<Item> VEHICLE_PARTS = createTag("vehicle_parts");
 
 
 
