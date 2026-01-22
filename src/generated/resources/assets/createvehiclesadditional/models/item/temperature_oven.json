@@ -1,3 +1,6 @@
 {
-  "parent": "createvehiclesadditional:block/temperature_oven"
+  "parent": "minecraft:block/generated",
+  "textures": {
+    "layer0": "createvehiclesadditional:block/temperature_oven"
+  }
 }

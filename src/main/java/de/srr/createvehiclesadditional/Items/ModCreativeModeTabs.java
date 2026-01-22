@@ -23,7 +23,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.GAS_PIPE);
                         output.accept(ModBlocks.BLOCK_OF_CARBON);
-                        output.accept(ModBlocks.TEMPERATURE_OVEN);
+                        //output.accept(ModBlocks.TEMPERATURE_OVEN);
                         output.accept(ModBlocks.CARBON_FIBER_BLOCK);
                         output.accept(ModBlocks.ELEMENT_SEPARATOR);
 
