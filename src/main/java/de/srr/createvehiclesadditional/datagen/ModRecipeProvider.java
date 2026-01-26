@@ -25,18 +25,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         //List<ItemLike>
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLOCK_OF_CARBON.get())
-                .pattern("CCC")
-                .pattern("CCC")
-                .pattern("CCC")
-                .define('C', ModItems.CARBON)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
-                .save(recipeOutput,"createvehiclesadditional:block_of_carbon_from_carbon");
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.CARBON,9)
-                .requires(ModBlocks.BLOCK_OF_CARBON)
-                .unlockedBy("has_block_of_carbon", has(ModBlocks.BLOCK_OF_CARBON))
-                .save(recipeOutput,"createvehiclesadditional:carbon_from_block_of_carbon");
+//        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLOCK_OF_CARBON.get())
+//                .pattern("CCC")
+//                .pattern("CCC")
+//                .pattern("CCC")
+//                .define('C', ModItems.CARBON)
+//                .unlockedBy("has_carbon", has(ModItems.CARBON))
+//                .save(recipeOutput,"createvehiclesadditional:block_of_carbon_from_carbon");
+//
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.CARBON,9)
+//                .requires(ModBlocks.BLOCK_OF_CARBON)
+//                .unlockedBy("has_block_of_carbon", has(ModBlocks.BLOCK_OF_CARBON))
+//                .save(recipeOutput,"createvehiclesadditional:carbon_from_block_of_carbon");
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

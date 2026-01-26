@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:block/generated",
-  "textures": {
-    "layer0": "createvehiclesadditional:block/carbon_fiber_block"
-  }
+  "parent": "createvehiclesadditional:block/carbon_fiber_block"
 }

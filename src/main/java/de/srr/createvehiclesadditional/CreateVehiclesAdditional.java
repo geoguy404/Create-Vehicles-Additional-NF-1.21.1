@@ -34,6 +34,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
 
+import static de.srr.createvehiclesadditional.Blocks.ModBlocks.BLOCK_OF_CARBON;
+
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(CreateVehiclesAdditional.MOD_ID)
 public class CreateVehiclesAdditional {
@@ -62,13 +64,13 @@ public class CreateVehiclesAdditional {
             .alwaysEdible().nutrition(1).saturationModifier(2f).build()));
 
     // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup.examplemod")) //The language key for the title of your CreativeModeTab
-            .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
-            .displayItems((parameters, output) -> {
-                output.accept(EXAMPLE_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
-            }).build());
+//    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
+//            .title(Component.translatable("itemGroup.examplemod")) //The language key for the title of your CreativeModeTab
+//            .withTabsBefore(CreativeModeTabs.COMBAT)
+//            .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
+//            .displayItems((parameters, output) -> {
+//                output.accept(EXAMPLE_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
+//            }).build());
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
@@ -107,26 +109,26 @@ public class CreateVehiclesAdditional {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.CARBON);
-            event.accept(ModItems.BUCKET_OF_ACRYLONITRILE);
+        //    event.accept(ModItems.CARBON);
+        //    event.accept(ModItems.BUCKET_OF_ACRYLONITRILE);
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.BLOCK_OF_CARBON);
-            event.accept(ModBlocks.CARBON_FIBER_BLOCK);
+//            event.accept(ModBlocks.BLOCK_OF_CARBON);
+            //event.accept(ModBlocks.CARBON_FIBER_BLOCK);
         }
 //        if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
 //            event.accept(ModBlocks.TEMPERATURE_OVEN);
 //        }
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.POLYACRYLONITRILE_POWDER);
+        //    event.accept(ModItems.POLYACRYLONITRILE_POWDER);
         }
         // Create-Tab
         if (event.getTabKey() == AllCreativeModeTabs.BASE_CREATIVE_TAB.getKey()) {
-            event.accept(ModItems.CARBON_ALLOY.get());
-            event.accept(ModItems.CARBON_SHEET.get());
+        //    event.accept(ModItems.CARBON_ALLOY.get());
+        //    event.accept(ModItems.CARBON_SHEET.get());
         }
         if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
-            event.accept(ModItems.INCA_KOLA_BOTTLE.get());
+        //    event.accept(ModItems.INCA_KOLA_BOTTLE.get());
         }
 
     }
