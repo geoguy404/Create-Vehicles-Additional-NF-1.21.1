@@ -20,6 +20,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.CARBON_HOE.get());
         handheldItem(ModItems.CARBON_SHOVEL.get());
 
+        basicItem(ModItems.CARBON_FIBER.get());
         basicItem(ModItems.CARBON.get());
         basicItem(ModItems.BUCKET_OF_ACRYLONITRILE.get());
         basicItem(ModItems.POLYACRYLONITRILE_POWDER.get());

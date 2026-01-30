@@ -95,6 +95,12 @@ public class ModItems{
 
     );
 
+    public static final DeferredItem<Item> CARBON_FIBER = ITEMS.registerItem(
+            "carbon_fiber",
+            Item::new,
+            new Item.Properties()
+    );
+
     public static final DeferredItem<SwordItem> CARBON_SWORD = ITEMS.register("carbon_sword",
             () -> new SwordItem(ModToolTiers.CARBON, new Item.Properties()
                     .attributes(SwordItem.createAttributes(ModToolTiers.CARBON, 5, -2.4f))));

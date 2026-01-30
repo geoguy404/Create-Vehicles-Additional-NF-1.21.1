@@ -41,6 +41,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.PROPYLENE_TANK);
                         output.accept(ModItems.SULFUR_TANK);
                         output.accept(ModItems.FORGED_CARBON);
+                        output.accept(ModItems.CARBON_FIBER);
 
                         output.accept(ModItems.CARBON_SWORD);
                         output.accept(ModItems.CARBON_AXE);

@@ -43,8 +43,6 @@ public class ModBlocks {
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK))); //change later
 
 
-
-
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
         ModItems.ITEMS.register(name,
                 () -> new BlockItem(block.get(), new Item.Properties()));

@@ -25,6 +25,52 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         //List<ItemLike>
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CARBON_HOE)
+                .pattern("AA ")
+                .pattern(" F ")
+                .pattern(" F ")
+                .define('A', ModItems.CARBON_ALLOY)
+                .define('F', ModItems.CARBON_FIBER)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CARBON_SHOVEL)
+                .pattern(" A ")
+                .pattern(" F ")
+                .pattern(" F ")
+                .define('A', ModItems.CARBON_ALLOY)
+                .define('F', ModItems.CARBON_FIBER)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CARBON_AXE)
+                .pattern("AA")
+                .pattern("AF")
+                .pattern(" F")
+                .define('A', ModItems.CARBON_ALLOY)
+                .define('F', ModItems.CARBON_FIBER)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CARBON_PICKAXE)
+                .pattern("AAA")
+                .pattern(" F ")
+                .pattern(" F ")
+                .define('A', ModItems.CARBON_ALLOY)
+                .define('F', ModItems.CARBON_FIBER)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CARBON_SWORD)
+                .pattern(" A ")
+                .pattern(" A ")
+                .pattern(" F ")
+                .define('A', ModItems.CARBON_ALLOY)
+                .define('F', ModItems.CARBON_FIBER)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLOCK_OF_CARBON.get())
                 .pattern("CCC")
                 .pattern("CCC")
