@@ -1,9 +1,14 @@
 package de.srr.createvehiclesadditional;
 
 import com.simibubi.create.AllCreativeModeTabs;
+import com.simibubi.create.foundation.item.ItemDescription;
+import com.simibubi.create.foundation.item.KineticStats;
+import com.simibubi.create.foundation.item.TooltipModifier;
 import de.srr.createvehiclesadditional.Blocks.ModBlocks;
 import de.srr.createvehiclesadditional.Items.ModCreativeModeTabs;
 import de.srr.createvehiclesadditional.Items.ModItems;
+import net.createmod.catnip.lang.FontHelper;
+import net.minecraft.resources.ResourceKey;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -44,24 +49,32 @@ public class CreateVehiclesAdditional {
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public static final CreateRegistrate REGISTRATE =
-            CreateRegistrate.create(MOD_ID);
+    public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(MOD_ID)
+            .defaultCreativeTab((ResourceKey<CreativeModeTab>) null)
+            .setTooltipModifierFactory(item ->
+                    new ItemDescription.Modifier(item, FontHelper.Palette.STANDARD_CREATE)
+                            .andThen(TooltipModifier.mapNull(KineticStats.create(item)))
+            );
+
+//    public static final CreateRegistrate REGISTRATE =
+//            CreateRegistrate.create(MOD_ID);
+
+    // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "examplemod" namespace
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
 
     // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MOD_ID);
     // Create a Deferred Register to hold Items which will all be registered under the "examplemod" namespace
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MOD_ID);
-    // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "examplemod" namespace
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
 
-    // Creates a new Block with the id "examplemod:example_block", combining the namespace and path
-    public static final DeferredBlock<Block> EXAMPLE_BLOCK = BLOCKS.registerSimpleBlock("example_block", BlockBehaviour.Properties.of().mapColor(MapColor.STONE));
-    // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
-    public static final DeferredItem<BlockItem> EXAMPLE_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("example_block", EXAMPLE_BLOCK);
-
-    // Creates a new food item with the id "examplemod:example_id", nutrition 1 and saturation 2
-    public static final DeferredItem<Item> EXAMPLE_ITEM = ITEMS.registerSimpleItem("example_item", new Item.Properties().food(new FoodProperties.Builder()
-            .alwaysEdible().nutrition(1).saturationModifier(2f).build()));
+//    // Creates a new Block with the id "examplemod:example_block", combining the namespace and path
+//    public static final DeferredBlock<Block> EXAMPLE_BLOCK = BLOCKS.registerSimpleBlock("example_block", BlockBehaviour.Properties.of().mapColor(MapColor.STONE));
+//    // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
+//    public static final DeferredItem<BlockItem> EXAMPLE_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("example_block", EXAMPLE_BLOCK);
+//
+//    // Creates a new food item with the id "examplemod:example_id", nutrition 1 and saturation 2
+//    public static final DeferredItem<Item> EXAMPLE_ITEM = ITEMS.registerSimpleItem("example_item", new Item.Properties().food(new FoodProperties.Builder()
+//            .alwaysEdible().nutrition(1).saturationModifier(2f).build()));
 
     // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
 //    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
@@ -79,14 +92,9 @@ public class CreateVehiclesAdditional {
         REGISTRATE.registerEventListeners(modEventBus);
 
 
-        // Register the Deferred Register to the mod event bus so blocks get registered
-        ModBlocks.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so items get registered
-        ModItems.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so tabs get registered
+        ModBlocks.register();
+        ModItems.register();
         ModCreativeModeTabs.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so BlockEntities get registered
-        //ModBlockEntities.register();
 
 
         // Register the item to a creative tab

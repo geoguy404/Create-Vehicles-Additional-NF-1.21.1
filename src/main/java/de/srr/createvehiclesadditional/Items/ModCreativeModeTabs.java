@@ -15,32 +15,31 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CreateVehiclesAdditional.MOD_ID);
 
-    public static final Supplier<CreativeModeTab> CREATIVE_MODE_TAB_SUPPLIER = CREATIVE_MODE_TAB.register("mod_items_tab",
+    public static final Supplier<CreativeModeTab> BISMUTH_ITEMS_TAB = CREATIVE_MODE_TAB.register("mod_items_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CARBON.get()))
-                    .title(Component.translatable("creativetab.createvehiclesadditional.items"))
+                    .title(Component.translatable("Mod Items"))
                     .displayItems((itemDisplayParameters, output) -> {
 
 
-//                        output.accept(ModBlocks.GAS_PIPE);
-//                        output.accept(ModBlocks.BLOCK_OF_CARBON);
-//                        output.accept(ModBlocks.TEMPERATURE_OVEN);
-//                        output.accept(ModBlocks.CARBON_FIBER_BLOCK);
-//                        output.accept(ModBlocks.ELEMENT_SEPARATOR);
-//
-//
-//                        output.accept(ModItems.BUCKET_OF_ACRYLONITRILE);
-//                        output.accept(ModItems.POLYACRYLONITRILE_POWDER);
-//                        output.accept(ModItems.CARBON);
-//                        output.accept(ModItems.CARBON_ALLOY);
-//                        output.accept(ModItems.CARBON_SHEET);
-//                        output.accept(ModItems.CARBON_FIBER_MASS);
-//                        output.accept(ModItems.GAS_TANK);
-//                        output.accept(ModItems.HYDROGEN_TANK);
-//                        output.accept(ModItems.NITROGEN_TANK);
-//                        output.accept(ModItems.OXYGEN_TANK);
-//                        output.accept(ModItems.PROPYLENE_TANK);
-//                        output.accept(ModItems.SULFUR_TANK);
-//                        output.accept(ModItems.FORGED_CARBON);
+                        //output.accept(ModBlocks.GAS_PIPE);
+                        output.accept(ModBlocks.BLOCK_OF_CARBON);
+                        output.accept(ModBlocks.TEMPERATURE_OVEN);
+                        output.accept(ModBlocks.CARBON_FIBER_BLOCK);
+                        output.accept(ModBlocks.ELEMENT_SEPARATOR);
+
+
+                        output.accept(ModItems.BUCKET_OF_ACRYLONITRILE);
+                        output.accept(ModItems.POLYACRYLONITRILE_POWDER);
+                        output.accept(ModItems.CARBON);
+                        output.accept(ModItems.CARBON_ALLOY);
+                        output.accept(ModItems.CARBON_SHEET);
+                        output.accept(ModItems.CARBON_FIBER_MASS);
+                        output.accept(ModItems.GAS_TANK);
+                        output.accept(ModItems.HYDROGEN_TANK);
+                        output.accept(ModItems.NITROGEN_TANK);
+                        output.accept(ModItems.OXYGEN_TANK);
+                        output.accept(ModItems.PROPYLENE_TANK);
+                        output.accept(ModItems.SULFUR_TANK);
 
                     }).build());
 

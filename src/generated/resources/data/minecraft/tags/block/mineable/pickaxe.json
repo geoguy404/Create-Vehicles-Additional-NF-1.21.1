@@ -1,5 +1,8 @@
 {
   "values": [
-    "createvehiclesadditional:carbon_fiber_block"
+    "createvehiclesadditional:block_of_carbon",
+    "createvehiclesadditional:carbon_fiber_block",
+    "createvehiclesadditional:gas_pipe",
+    "createvehiclesadditional:element_separator"
   ]
 }
