@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "createvehiclesadditional:block/element_separator" },
-    "facing=east":  { "model": "createvehiclesadditional:block/element_separator", "y": 90 },
-    "facing=south": { "model": "createvehiclesadditional:block/element_separator", "y": 180 },
-    "facing=west":  { "model": "createvehiclesadditional:block/element_separator", "y": 270 }
-  }
-}

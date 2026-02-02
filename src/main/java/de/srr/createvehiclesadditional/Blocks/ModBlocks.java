@@ -79,6 +79,12 @@ public class ModBlocks {
             .lang("Gas Pipe")
             .register();
 
+    public static final BlockEntry<ElementSeparatorBlock> ELEMENT_SEPARATOR = REGISTRATE
+            .block("element_separator", ElementSeparatorBlock::new)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
+            .properties(p -> p.strength(4f).noOcclusion().sound(SoundType.NETHERITE_BLOCK))
+            .blockstate((ctx, prov) -> {})
+            .register();
 
 //    //------------------KINETIC BLOCKS------------------//
     public static final BlockEntry<ElementSeparatorBlock> ELEMENT_SEPARATOR = REGISTRATE
