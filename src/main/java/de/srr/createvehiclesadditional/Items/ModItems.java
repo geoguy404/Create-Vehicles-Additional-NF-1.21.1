@@ -2,11 +2,10 @@ package de.srr.createvehiclesadditional.Items;
 
 import com.simibubi.create.foundation.data.AssetLookup;
 import com.tterrag.registrate.util.entry.ItemEntry;
+import com.tterrag.registrate.util.nullness.NonNullUnaryOperator;
 import de.srr.createvehiclesadditional.util.ModTags;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 
 import static de.srr.createvehiclesadditional.CreateVehiclesAdditional.REGISTRATE;
@@ -71,6 +70,51 @@ public class ModItems {
     public static final ItemEntry<Item> SULFUR_TANK = REGISTRATE
             .item("sulfur_tank", Item::new)
             .register();
+
+    public static final ItemEntry<Item> CARBON_FIBER = REGISTRATE
+            .item("carbon_fiber", Item::new)
+            .lang("Carbon Fiber")
+            .register();
+
+    public static final ItemEntry<Item> FORGED_CARBON = REGISTRATE
+            .item("forged_carbon", Item::new)
+            .lang("Forged Carbon")
+            .register();
+
+    public static final ItemEntry<AxeItem> CARBON_AXE = REGISTRATE
+            .item("carbon_axe", p -> new AxeItem(
+                    ModToolTiers.CARBON, p ))
+            .properties(properties -> properties.attributes(SwordItem.createAttributes(ModToolTiers.CARBON,6,-3.2f)))
+            .lang("Carbon Axe")
+            .register();
+
+    public static final ItemEntry<PickaxeItem> CARBON_PICKAXE = REGISTRATE
+            .item("carbon_pickaxe", p -> new PickaxeItem(
+                    ModToolTiers.CARBON, p ))
+            .properties(properties -> properties.attributes(SwordItem.createAttributes(ModToolTiers.CARBON,1,-2.8f)))
+            .lang("Carbon Pickaxe")
+            .register();
+
+    public static final ItemEntry<SwordItem> CARBON_SWORD = REGISTRATE
+            .item("carbon_sword", p -> new SwordItem(
+                    ModToolTiers.CARBON, p ))
+            .properties(properties -> properties.attributes(SwordItem.createAttributes(ModToolTiers.CARBON,5,-3.0f)))
+            .lang("Carbon Sword")
+            .register();
+
+    public static final ItemEntry<HoeItem> CARBON_HOE = REGISTRATE
+            .item("carbon_hoe", p -> new HoeItem(
+                    ModToolTiers.CARBON, p ))
+            .properties(properties -> properties.attributes(HoeItem.createAttributes(ModToolTiers.CARBON,0,-3.0f)))
+            .lang("Carbon Hoe")
+            .register();
+
+        public static final ItemEntry<ShovelItem> CARBON_SHOVEL = REGISTRATE
+                .item("carbon_shovel", p -> new ShovelItem(
+                        ModToolTiers.CARBON, p ))
+                .properties(p -> p.attributes(ShovelItem.createAttributes(ModToolTiers.CARBON,1.5f,-3.0f)))
+                .lang("Carbon Shovel")
+                .register();
 
     public static void register() {
         // Class loading

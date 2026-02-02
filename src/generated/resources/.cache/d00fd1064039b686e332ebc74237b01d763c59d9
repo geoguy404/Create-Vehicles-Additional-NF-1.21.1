@@ -1,9 +1,9 @@
-// 1.21.1	2026-02-02T13:40:25.8798484	Registrate Provider for createvehiclesadditional [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (enchantments), Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
+// 1.21.1	2026-02-02T14:23:24.4406548	Registrate Provider for createvehiclesadditional [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (enchantments), Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
 90ee1491e1b9a986b4665a3c06de46211ae99386 assets/createvehiclesadditional/blockstates/block_of_carbon.json
 ed332146d79ffc17a24e026f888a075fdf15bed6 assets/createvehiclesadditional/blockstates/carbon_fiber_block.json
 5ebed91d08129c869a65015d867c1ec1d44800d3 assets/createvehiclesadditional/blockstates/temperature_oven.json
-6dbc44772a650feee437ccee05bd2c72901b2bc9 assets/createvehiclesadditional/lang/en_ud.json
-de3ed0a8b92f678ee093d2a3e6741d8ebcef8462 assets/createvehiclesadditional/lang/en_us.json
+24bc641576751dbb522e390f5a12b651b4c545ff assets/createvehiclesadditional/lang/en_ud.json
+d54487afda0c8d7fe47c42fa8cdcd1b34635819f assets/createvehiclesadditional/lang/en_us.json
 f5ad9d54b3bde65759d65c8e5aa38b3e10b0c45b assets/createvehiclesadditional/models/block/block_of_carbon.json
 9251a917065138260972e241f5874588dbe3b408 assets/createvehiclesadditional/models/block/carbon_fiber_block.json
 5c5d10d15d44a2d359f132be557f527c1468f479 assets/createvehiclesadditional/models/block/temperature_oven.json
@@ -11,10 +11,17 @@ ed998a3cbbece2fba45e07efe4692fae79a1eff4 assets/createvehiclesadditional/models/
 99df2ec5a155845cfa6a93b70917ea08c021ba39 assets/createvehiclesadditional/models/item/bucket_of_acrylonitrile.json
 5ff156de6e25d49820634f852330f1306fb8263e assets/createvehiclesadditional/models/item/carbon.json
 5f5cd6743c58fe6f532263d5609c62d2c5237a3b assets/createvehiclesadditional/models/item/carbon_alloy.json
+6ebe73a677145f3c99c7a11234384d4a036090f4 assets/createvehiclesadditional/models/item/carbon_axe.json
+bfd6c3d0d29df855217c8f7e8dcee0a148a22921 assets/createvehiclesadditional/models/item/carbon_fiber.json
 30b7a7f90fb06cf3e39cac130550d1e284d58e92 assets/createvehiclesadditional/models/item/carbon_fiber_block.json
 bda50b5c3995e0a0ea4ec9a56132468fa0c0ba22 assets/createvehiclesadditional/models/item/carbon_fiber_mass.json
+37bc031ca48ecda6aa61a9cceba428352fdbacdb assets/createvehiclesadditional/models/item/carbon_hoe.json
+c9321aad1cd14c6f9343085999072d0aec8e9ac2 assets/createvehiclesadditional/models/item/carbon_pickaxe.json
 4a9e84b6dea7deff872f84506e5ad3a17ccc64f4 assets/createvehiclesadditional/models/item/carbon_sheet.json
+b4497460b93f32692767165b8d8fb33c45db93fc assets/createvehiclesadditional/models/item/carbon_shovel.json
+f1786b3a35aa68acd0c2b534787debe10bad3a4c assets/createvehiclesadditional/models/item/carbon_sword.json
 5df3ffeefaec5550ab902df26144905c8457040d assets/createvehiclesadditional/models/item/element_separator.json
+686d53d99c6751a5b9ed7792ff27bdb812990dc7 assets/createvehiclesadditional/models/item/forged_carbon.json
 412c263b74c765d146753a59711f1ff07a7b0389 assets/createvehiclesadditional/models/item/gas_tank.json
 6bc336f071082f260c7828b207375ef5ba435cf6 assets/createvehiclesadditional/models/item/hydrogen_tank.json
 f9f25cabafc9a87125c262133042a8be31186458 assets/createvehiclesadditional/models/item/inca_kola_bottle.json
