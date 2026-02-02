@@ -1,0 +1,20 @@
+{
+  "block.createvehiclesadditional.block_of_carbon": "Block of Carbon",
+  "block.createvehiclesadditional.carbon_fiber_block": "Carbon Fiber Block",
+  "block.createvehiclesadditional.element_separator": "Element Separator",
+  "block.createvehiclesadditional.gas_pipe": "Gas Pipe",
+  "block.createvehiclesadditional.temperature_oven": "Temperature Oven",
+  "item.createvehiclesadditional.bucket_of_acrylonitrile": "Bucket Of Acrylonitrile",
+  "item.createvehiclesadditional.carbon": "Carbon",
+  "item.createvehiclesadditional.carbon_alloy": "Carbon Alloy",
+  "item.createvehiclesadditional.carbon_fiber_mass": "Carbon Fiber Mass",
+  "item.createvehiclesadditional.carbon_sheet": "Carbon Sheet",
+  "item.createvehiclesadditional.gas_tank": "Gas Tank",
+  "item.createvehiclesadditional.hydrogen_tank": "Hydrogen Tank",
+  "item.createvehiclesadditional.inca_kola_bottle": "Inca Kola Bottle",
+  "item.createvehiclesadditional.nitrogen_tank": "Nitrogen Tank",
+  "item.createvehiclesadditional.oxygen_tank": "Oxygen Tank",
+  "item.createvehiclesadditional.polyacrylonitrile_powder": "Polyacrylonitrile Powder",
+  "item.createvehiclesadditional.propylene_tank": "Propylene Tank",
+  "item.createvehiclesadditional.sulfur_tank": "Sulfur Tank"
+}
