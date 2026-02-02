@@ -37,6 +37,14 @@ public class ModBlocks {
             .simpleItem()
             .register();
 
+    public static final BlockEntry<Block> CONNECTOR = REGISTRATE
+            .block("connector", Block::new)
+            .initialProperties(() -> Blocks.NETHERITE_BLOCK)
+            .properties(p -> p.strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK))
+            .blockstate((ctx, prov) -> {})
+            .simpleItem()
+            .register();
+
     //------------------SPECIAL BLOCKS------------------//
 
     public static final BlockEntry<GasPipeBlock> GAS_PIPE = REGISTRATE
@@ -44,6 +52,7 @@ public class ModBlocks {
             .initialProperties(() -> Blocks.COPPER_BLOCK)
             .properties(p -> p.strength(4f).requiresCorrectToolForDrops().sound(SoundType.COPPER))
             .blockstate((ctx, prov) -> {})
+            .simpleItem()
             .register();
 
 
@@ -54,6 +63,7 @@ public class ModBlocks {
             .initialProperties(() -> Blocks.IRON_BLOCK)
             .properties(p -> p.strength(4f).noOcclusion().sound(SoundType.NETHERITE_BLOCK))
             .blockstate((ctx, prov) -> {})
+            .simpleItem()
             .register();
 
 
@@ -66,7 +76,7 @@ public class ModBlocks {
             BLOCK_OF_CARBON,
             //TEMPERATURE_OVEN,
             CARBON_FIBER_BLOCK,
-            GAS_PIPE,
+            //GAS_PIPE,
             ELEMENT_SEPARATOR
     );
 

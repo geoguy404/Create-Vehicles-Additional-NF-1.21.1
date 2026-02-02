@@ -1,0 +1,13 @@
+// 1.21.1	2026-01-10T00:21:39.6600365	Registrate Provider for createvehiclesadditional [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (enchantments), Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
+90ee1491e1b9a986b4665a3c06de46211ae99386 assets/createvehiclesadditional/blockstates/block_of_carbon.json
+ed332146d79ffc17a24e026f888a075fdf15bed6 assets/createvehiclesadditional/blockstates/carbon_fiber_block.json
+4c2800b7d4415dcf2f4dd2fd7173d3106c30d4a3 assets/createvehiclesadditional/lang/en_ud.json
+860a6281fd30bf1156dacd6d64e34e0134d778b7 assets/createvehiclesadditional/lang/en_us.json
+f5ad9d54b3bde65759d65c8e5aa38b3e10b0c45b assets/createvehiclesadditional/models/block/block_of_carbon.json
+9251a917065138260972e241f5874588dbe3b408 assets/createvehiclesadditional/models/block/carbon_fiber_block.json
+ed998a3cbbece2fba45e07efe4692fae79a1eff4 assets/createvehiclesadditional/models/item/block_of_carbon.json
+30b7a7f90fb06cf3e39cac130550d1e284d58e92 assets/createvehiclesadditional/models/item/carbon_fiber_block.json
+770abff2353aa78a9f0c319eec6ee5c81983adc2 data/createvehiclesadditional/loot_table/blocks/block_of_carbon.json
+6165f980cf56b67d42ff0de0c2f0408db771b154 data/createvehiclesadditional/loot_table/blocks/carbon_fiber_block.json
+60dd099356d8dead5352e1ee00833167ce62005c data/createvehiclesadditional/loot_table/blocks/element_separator.json
+41621c3c004fb51a4d425b640691275c20567e58 data/createvehiclesadditional/loot_table/blocks/gas_pipe.json

@@ -17,16 +17,16 @@ public class ModCreativeModeTabs {
 
     public static final Supplier<CreativeModeTab> BISMUTH_ITEMS_TAB = CREATIVE_MODE_TAB.register("mod_items_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CARBON.get()))
-                    .title(Component.translatable("creativetab.createvehiclesadditional.modItems"))
+                    .title(Component.translatable("Create Vehicles Additional"))
                     .displayItems((itemDisplayParameters, output) -> {
 
 
-                        output.accept(ModBlocks.GAS_PIPE);
-                        output.accept(ModBlocks.BLOCK_OF_CARBON);
-                        //output.accept(ModBlocks.TEMPERATURE_OVEN);
-                        output.accept(ModBlocks.CARBON_FIBER_BLOCK);
-                        output.accept(ModBlocks.ELEMENT_SEPARATOR);
-
+//                        output.accept(ModBlocks.GAS_PIPE);
+//                        output.accept(ModBlocks.BLOCK_OF_CARBON);
+//                        //output.accept(ModBlocks.TEMPERATURE_OVEN);
+//                        output.accept(ModBlocks.CARBON_FIBER_BLOCK);
+//                        output.accept(ModBlocks.ELEMENT_SEPARATOR);
+//                        output.accept(ModBlocks.CONNECTOR);
 
                         output.accept(ModItems.BUCKET_OF_ACRYLONITRILE);
                         output.accept(ModItems.POLYACRYLONITRILE_POWDER);

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "createvehiclesadditional:block/connector" },
+    "facing=east":  { "model": "createvehiclesadditional:block/connector", "y": 90 },
+    "facing=south": { "model": "createvehiclesadditional:block/connector", "y": 180 },
+    "facing=west":  { "model": "createvehiclesadditional:block/connector", "y": 270 }
+  }
+}
