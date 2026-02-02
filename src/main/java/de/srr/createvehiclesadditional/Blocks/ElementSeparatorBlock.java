@@ -110,5 +110,3 @@ public class ElementSeparatorBlock extends HorizontalKineticBlock implements IBE
     }
 
 }
-
-

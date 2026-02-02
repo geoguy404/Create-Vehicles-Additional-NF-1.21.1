@@ -1,6 +1,5 @@
 package de.srr.createvehiclesadditional;
 
-import com.simibubi.create.AllCreativeModeTabs;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;

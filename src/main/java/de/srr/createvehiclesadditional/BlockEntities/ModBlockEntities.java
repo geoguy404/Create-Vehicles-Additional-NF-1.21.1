@@ -13,5 +13,10 @@ public class ModBlockEntities {
                     .validBlocks(ModBlocks.GAS_PIPE)
                     .register();
 
+    public static final BlockEntityEntry<ElementSeparatorBlockEntity> ELEMENT_SEPARATOR = REGISTRATE
+            .blockEntity("element_separator", ElementSeparatorBlockEntity::new)
+            .validBlocks(ModBlocks.ELEMENT_SEPARATOR)
+            .register();
+
     public static void register() {}
 }

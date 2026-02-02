@@ -1,7 +1,6 @@
 package de.srr.createvehiclesadditional.Blocks;
 
 import com.simibubi.create.content.equipment.wrench.IWrenchable;
-import com.simibubi.create.content.fluids.pipes.FluidPipeBlock;
 import de.srr.createvehiclesadditional.BlockEntities.GasPipeBlockEntity;
 import de.srr.createvehiclesadditional.BlockEntities.ModBlockEntities;
 import net.minecraft.core.BlockPos;
@@ -11,7 +10,6 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.*;
@@ -22,7 +20,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
-import java.util.Properties;
 
 public class GasPipeBlock extends Block implements IWrenchable, EntityBlock  {
 

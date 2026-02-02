@@ -1,9 +1,6 @@
 package de.srr.createvehiclesadditional;
 
-import de.srr.createvehiclesadditional.Blocks.ModBlocks;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;

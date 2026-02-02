@@ -1,12 +1,8 @@
 package de.srr.createvehiclesadditional.Items;
 
-import com.simibubi.create.foundation.data.AssetLookup;
 import com.tterrag.registrate.util.entry.ItemEntry;
-import com.tterrag.registrate.util.nullness.NonNullUnaryOperator;
 import de.srr.createvehiclesadditional.util.ModTags;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.*;
-import net.neoforged.bus.api.IEventBus;
 
 import static de.srr.createvehiclesadditional.CreateVehiclesAdditional.REGISTRATE;
 

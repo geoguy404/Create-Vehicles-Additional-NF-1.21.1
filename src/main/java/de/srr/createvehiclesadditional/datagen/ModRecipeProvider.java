@@ -1,13 +1,11 @@
 package de.srr.createvehiclesadditional.datagen;
 
-import com.simibubi.create.foundation.data.recipe.CreateMixingRecipeGen;
 import de.srr.createvehiclesadditional.Blocks.ModBlocks;
 import de.srr.createvehiclesadditional.CreateVehiclesAdditional;
 import de.srr.createvehiclesadditional.Items.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
