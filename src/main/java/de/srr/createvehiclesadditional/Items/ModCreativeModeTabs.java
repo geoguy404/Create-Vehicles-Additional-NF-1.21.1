@@ -1,60 +1,96 @@
 package de.srr.createvehiclesadditional.Items;
 
-import de.srr.createvehiclesadditional.Blocks.ModBlocks;
+import com.tterrag.registrate.util.entry.RegistryEntry;
 import de.srr.createvehiclesadditional.CreateVehiclesAdditional;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTab.DisplayItemsGenerator;
+import net.minecraft.world.item.CreativeModeTab.ItemDisplayParameters;
+import net.minecraft.world.item.CreativeModeTab.Output;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-import java.util.function.Supplier;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ModCreativeModeTabs {
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
+    private static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CreateVehiclesAdditional.MOD_ID);
 
-    public static final Supplier<CreativeModeTab> BISMUTH_ITEMS_TAB = CREATIVE_MODE_TAB.register("mod_items_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CARBON.get()))
-                    .title(Component.translatable("creativetab.createvehiclesadditional.modItems"))
-                    .displayItems((itemDisplayParameters, output) -> {
-
-
-                        output.accept(ModBlocks.GAS_PIPE);
-                        output.accept(ModBlocks.BLOCK_OF_CARBON);
-                        output.accept(ModBlocks.TEMPERATURE_OVEN);
-                        output.accept(ModBlocks.CARBON_FIBER_BLOCK);
-                        output.accept(ModBlocks.ELEMENT_SEPARATOR);
-
-
-                        output.accept(ModItems.BUCKET_OF_ACRYLONITRILE);
-                        output.accept(ModItems.POLYACRYLONITRILE_POWDER);
-                        output.accept(ModItems.CARBON);
-                        output.accept(ModItems.CARBON_ALLOY);
-                        output.accept(ModItems.CARBON_SHEET);
-                        output.accept(ModItems.CARBON_FIBER_MASS);
-                        output.accept(ModItems.GAS_TANK);
-                        output.accept(ModItems.HYDROGEN_TANK);
-                        output.accept(ModItems.NITROGEN_TANK);
-                        output.accept(ModItems.OXYGEN_TANK);
-                        output.accept(ModItems.PROPYLENE_TANK);
-                        output.accept(ModItems.SULFUR_TANK);
-                        output.accept(ModItems.FORGED_CARBON);
-                        output.accept(ModItems.CARBON_FIBER);
-
-                        output.accept(ModItems.CARBON_SWORD);
-                        output.accept(ModItems.CARBON_AXE);
-                        output.accept(ModItems.CARBON_PICKAXE);
-                        output.accept(ModItems.CARBON_HOE);
-                        output.accept(ModItems.CARBON_SHOVEL);
-
-                    }).build());
-
-
-
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MOD_TAB =
+            CREATIVE_MODE_TAB.register("mod_items_tab",
+                    () -> CreativeModeTab.builder()
+                            .title(Component.translatable("itemgroup.mod_items"))
+                            // Use a lazy supplier for the icon
+                            .icon(() -> new ItemStack(ModItems.CARBON.get()))
+                            .displayItems(new ModDisplayItemsGenerator())
+                            .build());
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);
+    }
+
+    private static class ModDisplayItemsGenerator implements DisplayItemsGenerator {
+        @Override
+        public void accept(ItemDisplayParameters parameters, Output output) {
+            // Collect all blocks first
+            List<Item> blocks = collectBlocks();
+            // Then collect all items
+            List<Item> items = collectItems();
+
+            // Output blocks first
+            for (Item block : blocks) {
+                output.accept(new ItemStack(block));
+            }
+
+            // Then output items
+            for (Item item : items) {
+                output.accept(new ItemStack(item));
+            }
+        }
+
+        private List<Item> collectBlocks() {
+            List<Item> blocks = new ArrayList<>();
+
+            // Get all registered blocks from your Registrate
+            for (RegistryEntry<Block, Block> entry : CreateVehiclesAdditional.REGISTRATE.getAll(Registries.BLOCK)) {
+                Block block = entry.get();
+                Item item = block.asItem();
+
+                // Skip if block has no item form
+                if (item == Items.AIR) {
+                    continue;
+                }
+
+                blocks.add(item);
+            }
+
+            return blocks;
+        }
+
+        private List<Item> collectItems() {
+            List<Item> items = new ArrayList<>();
+
+            // Get all registered items from your Registrate
+            for (RegistryEntry<Item, Item> entry : CreateVehiclesAdditional.REGISTRATE.getAll(Registries.ITEM)) {
+                Item item = entry.get();
+
+                // Skip block items (already added in blocks section)
+                if (item instanceof BlockItem) {
+                    continue;
+                }
+
+                items.add(item);
+            }
+
+            return items;
+        }
     }
 }

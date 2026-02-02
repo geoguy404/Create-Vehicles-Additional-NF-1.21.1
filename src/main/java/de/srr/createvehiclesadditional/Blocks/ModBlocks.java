@@ -1,10 +1,16 @@
 package de.srr.createvehiclesadditional.Blocks;
 
+import com.simibubi.create.foundation.data.AssetLookup;
+import com.tterrag.registrate.Registrate;
+import com.tterrag.registrate.providers.loot.RegistrateBlockLootTables;
+import com.tterrag.registrate.util.entry.BlockEntry;
 import de.srr.createvehiclesadditional.CreateVehiclesAdditional;
 import de.srr.createvehiclesadditional.Items.ModItems;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -13,48 +19,81 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.List;
 import java.util.function.Supplier;
+
+import static de.srr.createvehiclesadditional.CreateVehiclesAdditional.REGISTRATE;
 
 
 public class ModBlocks {
 
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(CreateVehiclesAdditional.MOD_ID);
 
-    public static final DeferredBlock<Block> BLOCK_OF_CARBON = registerBlock("block_of_carbon",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+    //------------------DECO BLOCKS------------------//
+    public static final BlockEntry<Block> BLOCK_OF_CARBON = REGISTRATE
+            .block("block_of_carbon", Block::new)
+            .initialProperties(() -> Blocks.DEEPSLATE)
+            .properties(p -> p.strength(4f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE))
+            .simpleItem()
+            //.blockstate((c, p) ->{})
+            .tag(BlockTags.NEEDS_IRON_TOOL)
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .loot(RegistrateBlockLootTables::dropSelf)
+            .lang("Block of Carbon")
+            .register();
 
-    public static final DeferredBlock<Block> TEMPERATURE_OVEN = registerBlock("temperature_oven",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
+    public static final BlockEntry<Block> TEMPERATURE_OVEN = REGISTRATE
+            .block("temperature_oven", Block::new)
+            .initialProperties(() -> Blocks.CALCITE)
+            .properties(p -> p.strength(4f).requiresCorrectToolForDrops().sound(SoundType.CALCITE))
+            //.blockstate((c, p) -> p.simpleBlock(c.getEntry(), AssetLookup.standardModel(c, p)))
+            .simpleItem()
+            .tag(BlockTags.NEEDS_IRON_TOOL)
+            .loot(RegistrateBlockLootTables::dropSelf)
+            .lang("Temperature Oven")
+            .register();
 
-    public static final DeferredBlock<Block> CARBON_FIBER_BLOCK = registerBlock("carbon_fiber_block",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));
+    public static final BlockEntry<Block> CARBON_FIBER_BLOCK = REGISTRATE
+            .block("carbon_fiber_block", Block::new)
+            .initialProperties(() -> Blocks.NETHERITE_BLOCK)
+            .properties(p -> p.strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK))
+            .simpleItem()
+            //.blockstate((c, p) -> p.simpleBlock(c.getEntry(), AssetLookup.standardModel(c, p)))
+            .tag(BlockTags.NEEDS_DIAMOND_TOOL)
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .loot(RegistrateBlockLootTables::dropSelf)
+            .lang("Carbon Fiber Block")
+            .register();
 
-    public static final DeferredBlock<Block> GAS_PIPE = registerBlock("gas_pipe",
-            () -> new GasPipeBlock(BlockBehaviour.Properties.of()
-                    .strength(4f)
-                    .requiresCorrectToolForDrops()
-                    .sound(SoundType.COPPER)));
+   //------------------SPECIAL BLOCKS------------------//
+    public static final BlockEntry<GasPipeBlock> GAS_PIPE = REGISTRATE
+            .block("gas_pipe", GasPipeBlock::new)
+            .initialProperties(() -> Blocks.COPPER_BLOCK)
+            .properties(p -> p.strength(4f).requiresCorrectToolForDrops().sound(SoundType.COPPER))
+            .blockstate((ctx, prov) -> {})
+            .tag(BlockTags.NEEDS_STONE_TOOL)
+            .item()
+            .model((ctx, prov) -> {
+            }).build()
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .loot(RegistrateBlockLootTables::dropSelf)
+            .lang("Gas Pipe")
+            .register();
 
-    public static final DeferredBlock<Block> ELEMENT_SEPARATOR = registerBlock("element_separator",
-            () -> new ElementSeparatorBlock(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK))); //change later
 
+//    //------------------KINETIC BLOCKS------------------//
+    public static final BlockEntry<ElementSeparatorBlock> ELEMENT_SEPARATOR = REGISTRATE
+            .block("element_separator", ElementSeparatorBlock::new)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
+            .properties(p -> p.strength(4f).noOcclusion().sound(SoundType.NETHERITE_BLOCK))
+            .blockstate((ctx, prov) -> {})
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .tag(BlockTags.NEEDS_IRON_TOOL)
+            .simpleItem()
+            .loot(RegistrateBlockLootTables::dropSelf)
+            .lang("Element Separator")
+            .register();
 
-    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-        ModItems.ITEMS.register(name,
-                () -> new BlockItem(block.get(), new Item.Properties()));
-    }
-
-    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
-        DeferredBlock<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn);
-        return toReturn;
-    }
-
-    public static void register(IEventBus eventBus){
-        BLOCKS.register(eventBus);
+    public static void register() {
+        // nur zum Classloading
     }
 }
