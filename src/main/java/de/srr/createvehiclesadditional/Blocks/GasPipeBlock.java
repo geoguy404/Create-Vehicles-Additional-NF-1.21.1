@@ -1,11 +1,15 @@
 package de.srr.createvehiclesadditional.Blocks;
 
 import com.simibubi.create.content.equipment.wrench.IWrenchable;
+import de.srr.createvehiclesadditional.BlockEntities.GasPipeBlockEntity;
+import de.srr.createvehiclesadditional.BlockEntities.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.*;
@@ -17,7 +21,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
-public class GasPipeBlock extends Block implements IWrenchable {
+public class GasPipeBlock extends Block implements IWrenchable, EntityBlock  {
 
     public static final BooleanProperty NORTH = BooleanProperty.create("north");
     public static final BooleanProperty SOUTH = BooleanProperty.create("south");
@@ -51,15 +55,14 @@ public class GasPipeBlock extends Block implements IWrenchable {
                         .setValue(UP,    false)
                         .setValue(DOWN,  false)
                         .setValue(FACING,  Direction.NORTH)
+                        .setValue(BlockStateProperties.WATERLOGGED, false)
         );
 
 
     }
 
     private boolean canConnectTo(BlockGetter level, BlockPos pos, Direction dir) {
-        BlockPos neighborPos = pos.relative(dir);
-        BlockState neighborState = level.getBlockState(neighborPos);
-        return neighborState.getBlock() instanceof GasPipeBlock;
+        return level.getBlockState(pos.relative(dir)).getBlock() instanceof GasPipeBlock;
     }
 
     private static int countConnections(BlockState state) {
@@ -129,7 +132,7 @@ public class GasPipeBlock extends Block implements IWrenchable {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(NORTH, SOUTH, EAST, WEST, UP, DOWN, FACING);
+        builder.add(NORTH, SOUTH, EAST, WEST, UP, DOWN, FACING, BlockStateProperties.WATERLOGGED);
     }
     private static VoxelShape shapeFor(Direction dir) {
         return switch (dir) {
@@ -180,5 +183,10 @@ public class GasPipeBlock extends Block implements IWrenchable {
     @Override
     public boolean propagatesSkylightDown(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos) {
         return true;
+    }
+
+    @Override
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return new GasPipeBlockEntity(ModBlockEntities.GAS_PIPE.get(),pos, state);
     }
 }

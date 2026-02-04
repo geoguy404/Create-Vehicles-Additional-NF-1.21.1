@@ -35,10 +35,12 @@ public class CreateVehiclesAdditionalClient {
 
         // to load transparent Textures correctly
         event.enqueueWork(() -> {
-           //add new Block with transparent Texture here
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.ELEMENT_SEPARATOR.get(), RenderType.cutout() // oder translucent()
-
+            ItemBlockRenderTypes.setRenderLayer(
+                    ModBlocks.ELEMENT_SEPARATOR.get(),
+                    RenderType.cutout()
             );
+           //add new Block with transparent Texture here
+            //ItemBlockRenderTypes.setRenderLayer(ModBlocks.ELEMENT_SEPARATOR.get(), RenderType.cutout() // oder translucent());
         });
     }
 }
