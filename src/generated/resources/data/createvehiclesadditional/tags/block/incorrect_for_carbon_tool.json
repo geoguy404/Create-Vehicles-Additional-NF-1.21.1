@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#createvehiclesadditional:needs_carbon_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_iron_tool"
+  ]
+}

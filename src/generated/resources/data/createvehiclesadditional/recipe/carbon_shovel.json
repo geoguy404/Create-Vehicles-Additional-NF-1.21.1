@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "createvehiclesadditional:carbon_alloy"
+    },
+    "F": {
+      "item": "createvehiclesadditional:carbon_fiber"
+    }
+  },
+  "pattern": [
+    " A ",
+    " F ",
+    " F "
+  ],
+  "result": {
+    "count": 1,
+    "id": "createvehiclesadditional:carbon_shovel"
+  }
+}
