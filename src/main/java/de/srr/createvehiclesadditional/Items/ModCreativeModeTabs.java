@@ -27,7 +27,7 @@ public class ModCreativeModeTabs {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MOD_TAB =
             CREATIVE_MODE_TAB.register("mod_items_tab",
                     () -> CreativeModeTab.builder()
-                            .title(Component.translatable("itemgroup.mod_items"))
+                            .title(Component.translatable("Create Vehicles Additional"))
                             // Use a lazy supplier for the icon
                             .icon(() -> new ItemStack(ModItems.CARBON.get()))
                             .displayItems(new ModDisplayItemsGenerator())

@@ -34,6 +34,11 @@ public class ModItems {
             .item("carbon_sheet", Item::new)
             .register();
 
+    public static final ItemEntry<Item> CARBON_NUGGET = REGISTRATE
+            .item("carbon_nugget", Item::new)
+            .properties(p -> p.rarity(Rarity.UNCOMMON))
+            .register();
+
     public static final ItemEntry<Item> CARBON_FIBER_MASS = REGISTRATE
             .item("carbon_fiber_mass", Item::new)
             .register();
