@@ -6,6 +6,7 @@ import de.srr.createvehiclesadditional.Items.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
@@ -20,6 +21,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput) {
+
+
+
 
         //List<ItemLike>
 
@@ -68,7 +72,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_carbon", has(ModItems.CARBON))
                 .save(recipeOutput);
 
-
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLOCK_OF_CARBON.get())
                 .pattern("CCC")
                 .pattern("CCC")
@@ -81,6 +84,173 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.BLOCK_OF_CARBON)
                 .unlockedBy("has_block_of_carbon", has(ModBlocks.BLOCK_OF_CARBON))
                 .save(recipeOutput,"createvehiclesadditional:carbon_from_block_of_carbon");
+
+        //FORGED CARBON BLOCKS//
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GOLDEN_FORGED_CARBON_BLOCK)
+                .pattern("GGG")
+                .pattern("GFG")
+                .pattern("GGG")
+                .define('F', ModBlocks.FORGED_CARBON_BLOCK)
+                .define('G', Items.GOLD_NUGGET)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+
+        //CARBON FIBER BLOCKS//
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GOLDEN_CARBON_FIBER_BLOCK)
+                .pattern("GGG")
+                .pattern("GCG")
+                .pattern("GGG")
+                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('G', Items.GOLD_NUGGET)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_CARBON_FIBER_BLOCK)
+                .pattern("BBB")
+                .pattern("BCB")
+                .pattern("BBB")
+                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('B', Items.BLACK_DYE)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GRAY_CARBON_FIBER_BLOCK)
+                .pattern("GGG")
+                .pattern("GCG")
+                .pattern("GGG")
+                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('G', Items.GRAY_DYE)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_CARBON_FIBER_BLOCK)
+                .pattern("LLL")
+                .pattern("LCL")
+                .pattern("LLL")
+                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('L', Items.LIGHT_GRAY_DYE)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WHITE_CARBON_FIBER_BLOCK)
+                .pattern("WWW")
+                .pattern("WCW")
+                .pattern("WWW")
+                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('W', Items.WHITE_DYE)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_CARBON_FIBER_BLOCK)
+                .pattern("BBB")
+                .pattern("BCB")
+                .pattern("BBB")
+                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('B', Items.BLUE_DYE)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_CARBON_FIBER_BLOCK)
+                .pattern("LLL")
+                .pattern("LCL")
+                .pattern("LLL")
+                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('L', Items.LIGHT_BLUE_DYE)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CYAN_CARBON_FIBER_BLOCK)
+                .pattern("ZZZ")
+                .pattern("ZCZ")
+                .pattern("ZZZ")
+                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('Z', Items.CYAN_DYE)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GREEN_CARBON_FIBER_BLOCK)
+                .pattern("GGG")
+                .pattern("GCG")
+                .pattern("GGG")
+                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('G', Items.GREEN_DYE)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIME_CARBON_FIBER_BLOCK)
+                .pattern("LLL")
+                .pattern("LCL")
+                .pattern("LLL")
+                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('L', Items.LIME_DYE)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YELLOW_CARBON_FIBER_BLOCK)
+                .pattern("YYY")
+                .pattern("YCY")
+                .pattern("YYY")
+                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('Y', Items.YELLOW_DYE)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ORANGE_CARBON_FIBER_BLOCK)
+                .pattern("OOO")
+                .pattern("OCO")
+                .pattern("OOO")
+                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('O', Items.ORANGE_DYE)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_CARBON_FIBER_BLOCK)
+                .pattern("RRR")
+                .pattern("RCR")
+                .pattern("RRR")
+                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('R',Items.RED_DYE)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGENTA_CARBON_FIBER_BLOCK)
+                .pattern("MMM")
+                .pattern("MCM")
+                .pattern("MMM")
+                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('M', Items.MAGENTA_DYE)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_CARBON_FIBER_BLOCK)
+                .pattern("PPP")
+                .pattern("PCP")
+                .pattern("PPP")
+                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('P', Items.PINK_DYE)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURPLE_CARBON_FIBER_BLOCK)
+                .pattern("PPP")
+                .pattern("PCP")
+                .pattern("PPP")
+                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('P', Items.PURPLE_DYE)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BROWN_CARBON_FIBER_BLOCK)
+                .pattern("BBB")
+                .pattern("BCB")
+                .pattern("BBB")
+                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('B', Items.BROWN_DYE)
+                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .save(recipeOutput);
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
