@@ -1,30 +1,63 @@
+<p align="center"><img src="createvehicles_additional_logo_v1.png" alt="Logo" width="600"></p>
 
-Installation information
-=======
+<h1 align="center">Create Vehicles Additional</h1>
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
-
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
-
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
-
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
-
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+<p align="center">
+  <img src="https://img.shields.io/badge/Loader-NeoForge-red?style=for-the-badge" alt="Loader">
+  <img src="https://img.shields.io/badge/Available_for-1.21.1-blue?style=for-the-badge" alt="Available for">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/badge/Status-Alpha-yellow?style=for-the-badge" alt="Status">
+</p>
 
 
-==========
+## Description
 
-The Create Vehicles Additional Mod features a website for Documentation [Create Vehicles Additional](https://geoguy404.github.io/Create-Vehicles-Additional-NF-1.21.1/).
+**Create Vehicles Additional** is an expansion for the [Create Mod](https://github.com/Creators-of-Create/Create).
+
+It introduces advanced engineering systems and large-scale technical mechanics, including:
+
+- [Vehicle Creation](#vehicle-creation)
+- [Steel Production](#steel-production)
+- [Oil Processing](#oil-processing)
+- [Carbon Processing](#carbon-processing)
+- [Nuclear Engineering](#nuclear-engineering)
+
+
+## Vehicle Creation
+
+Build fully functional:
+
+- Planes  
+- Cars  
+- Boats  
+- Rockets  
+
+The mod introduces a new physical engine system that removes previous technical limitations and enables realistic, large-scale vehicle construction.
+
+
+## Steel Production
+
+Adds a complete steel production chain including advanced smelting and industrial processing methods.
+
+*(More details coming soon.)*
+
+
+## Oil Processing
+
+Extract, refine, and process oil into usable fuels and industrial materials.
+
+*(More details coming soon.)*
+
+
+## Carbon Processing
+
+Advanced carbon handling and material synthesis systems for industrial-scale production.
+
+*(More details coming soon.)*
+
+
+## Nuclear Engineering
+
+High-end engineering with nuclear systems for energy generation and advanced applications.
+
+*(More details coming soon.)*
