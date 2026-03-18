@@ -32,7 +32,7 @@ public class CreateVehiclesAdditionalClient {
         // Some client setup code
         CreateVehiclesAdditional.LOGGER.info("HELLO FROM CLIENT SETUP");
         CreateVehiclesAdditional.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
-
+        CVAPartialModels.init();
         // to load transparent Textures correctly
         event.enqueueWork(() -> {
             ItemBlockRenderTypes.setRenderLayer(
