@@ -46,6 +46,14 @@ public class CVACreativeModeTabs {
                             .displayItems(CVAPipes::addCreativeTabItems)
                             .build());
 
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> DECORATION_TAB =
+            CREATIVE_MODE_TAB.register("decoration_tab",
+                    () -> CreativeModeTab.builder()
+                            .title(Component.translatable("itemgroup.decoration"))
+                            .icon(() -> new ItemStack(CVABlocks.BLACK_FORGED_CARBON_BLOCK.asItem()))
+                            .displayItems(new DecorationDisplayItemsGenerator())
+                            .build());
+
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);
     }
@@ -105,6 +113,52 @@ public class CVACreativeModeTabs {
             }
 
             return items;
+        }
+    }
+
+    private static class DecorationDisplayItemsGenerator implements DisplayItemsGenerator {
+        @Override
+        public void accept(ItemDisplayParameters parameters, Output output) {
+            // Forged Carbon Blocks
+            output.accept(CVABlocks.BLACK_FORGED_CARBON_BLOCK.asItem());
+            output.accept(CVABlocks.WHITE_FORGED_CARBON_BLOCK.asItem());
+            output.accept(CVABlocks.GRAY_FORGED_CARBON_BLOCK.asItem());
+            output.accept(CVABlocks.LIGHT_GRAY_FORGED_CARBON_BLOCK.asItem());
+            output.accept(CVABlocks.BROWN_FORGED_CARBON_BLOCK.asItem());
+            output.accept(CVABlocks.RED_FORGED_CARBON_BLOCK.asItem());
+            output.accept(CVABlocks.ORANGE_FORGED_CARBON_BLOCK.asItem());
+            output.accept(CVABlocks.YELLOW_FORGED_CARBON_BLOCK.asItem());
+            output.accept(CVABlocks.LIME_FORGED_CARBON_BLOCK.asItem());
+            output.accept(CVABlocks.GREEN_FORGED_CARBON_BLOCK.asItem());
+            output.accept(CVABlocks.CYAN_FORGED_CARBON_BLOCK.asItem());
+            output.accept(CVABlocks.LIGHT_BLUE_FORGED_CARBON_BLOCK.asItem());
+            output.accept(CVABlocks.BLUE_CARBON_FIBER_BLOCK.asItem()); // note: this is BLUE_FORGED in your field name
+            output.accept(CVABlocks.PURPLE_FORGED_CARBON_BLOCK.asItem());
+            output.accept(CVABlocks.MAGENTA_FORGED_CARBON_BLOCK.asItem());
+            output.accept(CVABlocks.PINK_FORGED_CARBON_BLOCK.asItem());
+            output.accept(CVABlocks.GOLDEN_FORGED_CARBON_BLOCK.asItem());
+            output.accept(CVABlocks.FORGED_CARBON_BLOCK.asItem());
+
+            // Carbon Fiber Blocks
+            output.accept(CVABlocks.BLACK_CARBON_FIBER_BLOCK.asItem());
+            output.accept(CVABlocks.WHITE_CARBON_FIBER_BLOCK.asItem());
+            output.accept(CVABlocks.GRAY_CARBON_FIBER_BLOCK.asItem());
+            output.accept(CVABlocks.LIGHT_GRAY_CARBON_FIBER_BLOCK.asItem());
+            output.accept(CVABlocks.BROWN_CARBON_FIBER_BLOCK.asItem());
+            output.accept(CVABlocks.RED_CARBON_FIBER_BLOCK.asItem());
+            output.accept(CVABlocks.ORANGE_CARBON_FIBER_BLOCK.asItem());
+            output.accept(CVABlocks.YELLOW_CARBON_FIBER_BLOCK.asItem());
+            output.accept(CVABlocks.LIME_CARBON_FIBER_BLOCK.asItem());
+            output.accept(CVABlocks.GREEN_CARBON_FIBER_BLOCK.asItem());
+            output.accept(CVABlocks.CYAN_CARBON_FIBER_BLOCK.asItem());
+            output.accept(CVABlocks.LIGHT_BLUE_CARBON_FIBER_BLOCK.asItem());
+            output.accept(CVABlocks.BLUE_CARBON_FIBER_BLOCK.asItem());
+            output.accept(CVABlocks.PURPLE_CARBON_FIBER_BLOCK.asItem());
+            output.accept(CVABlocks.MAGENTA_CARBON_FIBER_BLOCK.asItem());
+            output.accept(CVABlocks.PINK_CARBON_FIBER_BLOCK.asItem());
+            output.accept(CVABlocks.GOLDEN_CARBON_FIBER_BLOCK.asItem());
+            output.accept(CVABlocks.CARBON_FIBER_BLOCK.asItem());
+            output.accept(CVABlocks.BLOCK_OF_CARBON.asItem());
         }
     }
 }

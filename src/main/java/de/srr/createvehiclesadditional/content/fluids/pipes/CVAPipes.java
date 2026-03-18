@@ -4,12 +4,8 @@ import com.simibubi.create.foundation.data.CreateRegistrate;
 import de.srr.createvehiclesadditional.CVACreativeModeTabs;
 import de.srr.createvehiclesadditional.CVASpriteShifts;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Block;
 
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import static de.srr.createvehiclesadditional.CreateVehiclesAdditional.REGISTRATE;
 

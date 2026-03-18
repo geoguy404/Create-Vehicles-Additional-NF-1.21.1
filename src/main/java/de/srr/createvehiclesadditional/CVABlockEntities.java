@@ -16,7 +16,6 @@ import com.simibubi.create.foundation.blockEntity.renderer.SmartBlockEntityRende
 import com.tterrag.registrate.util.entry.BlockEntityEntry;
 import de.srr.createvehiclesadditional.content.fluids.pipes.CVAPipeBlockEntity;
 import de.srr.createvehiclesadditional.content.fluids.pipes.CVAPipes;
-import de.srr.createvehiclesadditional.content.fluids.pipes.gasPipe.GasPipeBlockEntity;
 import de.srr.createvehiclesadditional.content.kinectics.elementSeparator.ElementSeparatorBlockEntity;
 
 import static de.srr.createvehiclesadditional.CreateVehiclesAdditional.REGISTRATE;

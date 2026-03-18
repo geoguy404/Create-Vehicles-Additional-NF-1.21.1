@@ -1,6 +1,5 @@
 package de.srr.createvehiclesadditional;
 
-import de.srr.createvehiclesadditional.Blocks.ModBlocks;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -36,7 +35,7 @@ public class CreateVehiclesAdditionalClient {
         // to load transparent Textures correctly
         event.enqueueWork(() -> {
             ItemBlockRenderTypes.setRenderLayer(
-                    ModBlocks.ELEMENT_SEPARATOR.get(),
+                    CVABlocks.ELEMENT_SEPARATOR.get(),
                     RenderType.cutout()
             );
            //add new Block with transparent Texture here

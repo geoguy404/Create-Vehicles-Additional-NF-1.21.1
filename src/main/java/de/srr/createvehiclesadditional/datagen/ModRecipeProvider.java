@@ -1,8 +1,8 @@
 package de.srr.createvehiclesadditional.datagen;
 
-import de.srr.createvehiclesadditional.Blocks.ModBlocks;
+import de.srr.createvehiclesadditional.CVABlocks;
+import de.srr.createvehiclesadditional.CVAItems;
 import de.srr.createvehiclesadditional.CreateVehiclesAdditional;
-import de.srr.createvehiclesadditional.Items.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -27,372 +27,372 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         //List<ItemLike>
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CARBON_HOE)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVAItems.CARBON_HOE)
                 .pattern("AA ")
                 .pattern(" F ")
                 .pattern(" F ")
-                .define('A', ModItems.CARBON_ALLOY)
-                .define('F', ModItems.CARBON_FIBER)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .define('A', CVAItems.CARBON_ALLOY)
+                .define('F', CVAItems.CARBON_FIBER)
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CARBON_SHOVEL)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVAItems.CARBON_SHOVEL)
                 .pattern(" A ")
                 .pattern(" F ")
                 .pattern(" F ")
-                .define('A', ModItems.CARBON_ALLOY)
-                .define('F', ModItems.CARBON_FIBER)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .define('A', CVAItems.CARBON_ALLOY)
+                .define('F', CVAItems.CARBON_FIBER)
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CARBON_AXE)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVAItems.CARBON_AXE)
                 .pattern("AA")
                 .pattern("AF")
                 .pattern(" F")
-                .define('A', ModItems.CARBON_ALLOY)
-                .define('F', ModItems.CARBON_FIBER)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .define('A', CVAItems.CARBON_ALLOY)
+                .define('F', CVAItems.CARBON_FIBER)
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CARBON_PICKAXE)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVAItems.CARBON_PICKAXE)
                 .pattern("AAA")
                 .pattern(" F ")
                 .pattern(" F ")
-                .define('A', ModItems.CARBON_ALLOY)
-                .define('F', ModItems.CARBON_FIBER)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .define('A', CVAItems.CARBON_ALLOY)
+                .define('F', CVAItems.CARBON_FIBER)
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CARBON_SWORD)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVAItems.CARBON_SWORD)
                 .pattern(" A ")
                 .pattern(" A ")
                 .pattern(" F ")
-                .define('A', ModItems.CARBON_ALLOY)
-                .define('F', ModItems.CARBON_FIBER)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .define('A', CVAItems.CARBON_ALLOY)
+                .define('F', CVAItems.CARBON_FIBER)
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLOCK_OF_CARBON.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.BLOCK_OF_CARBON.get())
                 .pattern("CCC")
                 .pattern("CCC")
                 .pattern("CCC")
-                .define('C', ModItems.CARBON)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .define('C', CVAItems.CARBON)
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput,"createvehiclesadditional:block_of_carbon_from_carbon");
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.CARBON,9)
-                .requires(ModBlocks.BLOCK_OF_CARBON)
-                .unlockedBy("has_block_of_carbon", has(ModBlocks.BLOCK_OF_CARBON))
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,CVAItems.CARBON,9)
+                .requires(CVABlocks.BLOCK_OF_CARBON)
+                .unlockedBy("has_block_of_carbon", has(CVABlocks.BLOCK_OF_CARBON))
                 .save(recipeOutput,"createvehiclesadditional:carbon_from_block_of_carbon");
 
         //FORGED CARBON BLOCKS//
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GOLDEN_FORGED_CARBON_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.GOLDEN_FORGED_CARBON_BLOCK)
                 .pattern("GGG")
                 .pattern("GFG")
                 .pattern("GGG")
-                .define('F', ModBlocks.FORGED_CARBON_BLOCK)
+                .define('F', CVABlocks.FORGED_CARBON_BLOCK)
                 .define('G', Items.GOLD_NUGGET)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_FORGED_CARBON_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.BLACK_FORGED_CARBON_BLOCK)
                 .pattern("BBB")
                 .pattern("BFB")
                 .pattern("BBB")
-                .define('F', ModBlocks.FORGED_CARBON_BLOCK)
+                .define('F', CVABlocks.FORGED_CARBON_BLOCK)
                 .define('B', Items.BLACK_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GRAY_FORGED_CARBON_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.GRAY_FORGED_CARBON_BLOCK)
                 .pattern("GGG")
                 .pattern("GFG")
                 .pattern("GGG")
-                .define('F', ModBlocks.FORGED_CARBON_BLOCK)
+                .define('F', CVABlocks.FORGED_CARBON_BLOCK)
                 .define('G', Items.GRAY_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_FORGED_CARBON_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.LIGHT_GRAY_FORGED_CARBON_BLOCK)
                 .pattern("LLL")
                 .pattern("LFL")
                 .pattern("LLL")
-                .define('F', ModBlocks.FORGED_CARBON_BLOCK)
+                .define('F', CVABlocks.FORGED_CARBON_BLOCK)
                 .define('L', Items.LIGHT_GRAY_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WHITE_FORGED_CARBON_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.WHITE_FORGED_CARBON_BLOCK)
                 .pattern("WWW")
                 .pattern("WFW")
                 .pattern("WWW")
-                .define('F', ModBlocks.FORGED_CARBON_BLOCK)
+                .define('F', CVABlocks.FORGED_CARBON_BLOCK)
                 .define('W', Items.WHITE_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_FORGED_CARBON_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.BLUE_FORGED_CARBON_BLOCK)
                 .pattern("BBB")
                 .pattern("BFB")
                 .pattern("BBB")
-                .define('F', ModBlocks.FORGED_CARBON_BLOCK)
+                .define('F', CVABlocks.FORGED_CARBON_BLOCK)
                 .define('B', Items.BLUE_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_FORGED_CARBON_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.LIGHT_BLUE_FORGED_CARBON_BLOCK)
                 .pattern("LLL")
                 .pattern("LFL")
                 .pattern("LLL")
-                .define('F', ModBlocks.FORGED_CARBON_BLOCK)
+                .define('F', CVABlocks.FORGED_CARBON_BLOCK)
                 .define('L', Items.LIGHT_BLUE_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CYAN_FORGED_CARBON_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.CYAN_FORGED_CARBON_BLOCK)
                 .pattern("ZZZ")
                 .pattern("ZFZ")
                 .pattern("ZZZ")
-                .define('F', ModBlocks.FORGED_CARBON_BLOCK)
+                .define('F', CVABlocks.FORGED_CARBON_BLOCK)
                 .define('Z', Items.CYAN_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GREEN_FORGED_CARBON_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.GREEN_FORGED_CARBON_BLOCK)
                 .pattern("GGG")
                 .pattern("GFG")
                 .pattern("GGG")
-                .define('F', ModBlocks.FORGED_CARBON_BLOCK)
+                .define('F', CVABlocks.FORGED_CARBON_BLOCK)
                 .define('G', Items.GREEN_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIME_FORGED_CARBON_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.LIME_FORGED_CARBON_BLOCK)
                 .pattern("LLL")
                 .pattern("LFL")
                 .pattern("LLL")
-                .define('F', ModBlocks.FORGED_CARBON_BLOCK)
+                .define('F', CVABlocks.FORGED_CARBON_BLOCK)
                 .define('L', Items.LIME_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YELLOW_FORGED_CARBON_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.YELLOW_FORGED_CARBON_BLOCK)
                 .pattern("YYY")
                 .pattern("YFY")
                 .pattern("YYY")
-                .define('F', ModBlocks.FORGED_CARBON_BLOCK)
+                .define('F', CVABlocks.FORGED_CARBON_BLOCK)
                 .define('Y', Items.YELLOW_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ORANGE_FORGED_CARBON_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.ORANGE_FORGED_CARBON_BLOCK)
                 .pattern("OOO")
                 .pattern("OFO")
                 .pattern("OOO")
-                .define('F', ModBlocks.FORGED_CARBON_BLOCK)
+                .define('F', CVABlocks.FORGED_CARBON_BLOCK)
                 .define('O', Items.ORANGE_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_FORGED_CARBON_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.RED_FORGED_CARBON_BLOCK)
                 .pattern("RRR")
                 .pattern("RFR")
                 .pattern("RRR")
-                .define('F', ModBlocks.FORGED_CARBON_BLOCK)
+                .define('F', CVABlocks.FORGED_CARBON_BLOCK)
                 .define('R',Items.RED_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGENTA_FORGED_CARBON_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.MAGENTA_FORGED_CARBON_BLOCK)
                 .pattern("MMM")
                 .pattern("MFM")
                 .pattern("MMM")
-                .define('F', ModBlocks.FORGED_CARBON_BLOCK)
+                .define('F', CVABlocks.FORGED_CARBON_BLOCK)
                 .define('M', Items.MAGENTA_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_FORGED_CARBON_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.PINK_FORGED_CARBON_BLOCK)
                 .pattern("PPP")
                 .pattern("PFP")
                 .pattern("PPP")
-                .define('F', ModBlocks.FORGED_CARBON_BLOCK)
+                .define('F', CVABlocks.FORGED_CARBON_BLOCK)
                 .define('P', Items.PINK_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURPLE_FORGED_CARBON_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.PURPLE_FORGED_CARBON_BLOCK)
                 .pattern("PPP")
                 .pattern("PFP")
                 .pattern("PPP")
-                .define('F', ModBlocks.FORGED_CARBON_BLOCK)
+                .define('F', CVABlocks.FORGED_CARBON_BLOCK)
                 .define('P', Items.PURPLE_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BROWN_FORGED_CARBON_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.BROWN_FORGED_CARBON_BLOCK)
                 .pattern("BBB")
                 .pattern("BFB")
                 .pattern("BBB")
-                .define('F', ModBlocks.FORGED_CARBON_BLOCK)
+                .define('F', CVABlocks.FORGED_CARBON_BLOCK)
                 .define('B', Items.BROWN_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
         //CARBON FIBER BLOCKS//
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GOLDEN_CARBON_FIBER_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.GOLDEN_CARBON_FIBER_BLOCK)
                 .pattern("GGG")
                 .pattern("GCG")
                 .pattern("GGG")
-                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('C', CVABlocks.CARBON_FIBER_BLOCK)
                 .define('G', Items.GOLD_NUGGET)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_CARBON_FIBER_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.BLACK_CARBON_FIBER_BLOCK)
                 .pattern("BBB")
                 .pattern("BCB")
                 .pattern("BBB")
-                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('C', CVABlocks.CARBON_FIBER_BLOCK)
                 .define('B', Items.BLACK_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GRAY_CARBON_FIBER_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.GRAY_CARBON_FIBER_BLOCK)
                 .pattern("GGG")
                 .pattern("GCG")
                 .pattern("GGG")
-                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('C', CVABlocks.CARBON_FIBER_BLOCK)
                 .define('G', Items.GRAY_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_CARBON_FIBER_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.LIGHT_GRAY_CARBON_FIBER_BLOCK)
                 .pattern("LLL")
                 .pattern("LCL")
                 .pattern("LLL")
-                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('C', CVABlocks.CARBON_FIBER_BLOCK)
                 .define('L', Items.LIGHT_GRAY_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WHITE_CARBON_FIBER_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.WHITE_CARBON_FIBER_BLOCK)
                 .pattern("WWW")
                 .pattern("WCW")
                 .pattern("WWW")
-                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('C', CVABlocks.CARBON_FIBER_BLOCK)
                 .define('W', Items.WHITE_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_CARBON_FIBER_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.BLUE_CARBON_FIBER_BLOCK)
                 .pattern("BBB")
                 .pattern("BCB")
                 .pattern("BBB")
-                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('C', CVABlocks.CARBON_FIBER_BLOCK)
                 .define('B', Items.BLUE_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_CARBON_FIBER_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.LIGHT_BLUE_CARBON_FIBER_BLOCK)
                 .pattern("LLL")
                 .pattern("LCL")
                 .pattern("LLL")
-                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('C', CVABlocks.CARBON_FIBER_BLOCK)
                 .define('L', Items.LIGHT_BLUE_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CYAN_CARBON_FIBER_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.CYAN_CARBON_FIBER_BLOCK)
                 .pattern("ZZZ")
                 .pattern("ZCZ")
                 .pattern("ZZZ")
-                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('C', CVABlocks.CARBON_FIBER_BLOCK)
                 .define('Z', Items.CYAN_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GREEN_CARBON_FIBER_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.GREEN_CARBON_FIBER_BLOCK)
                 .pattern("GGG")
                 .pattern("GCG")
                 .pattern("GGG")
-                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('C', CVABlocks.CARBON_FIBER_BLOCK)
                 .define('G', Items.GREEN_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIME_CARBON_FIBER_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.LIME_CARBON_FIBER_BLOCK)
                 .pattern("LLL")
                 .pattern("LCL")
                 .pattern("LLL")
-                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('C', CVABlocks.CARBON_FIBER_BLOCK)
                 .define('L', Items.LIME_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YELLOW_CARBON_FIBER_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.YELLOW_CARBON_FIBER_BLOCK)
                 .pattern("YYY")
                 .pattern("YCY")
                 .pattern("YYY")
-                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('C', CVABlocks.CARBON_FIBER_BLOCK)
                 .define('Y', Items.YELLOW_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ORANGE_CARBON_FIBER_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.ORANGE_CARBON_FIBER_BLOCK)
                 .pattern("OOO")
                 .pattern("OCO")
                 .pattern("OOO")
-                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('C', CVABlocks.CARBON_FIBER_BLOCK)
                 .define('O', Items.ORANGE_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_CARBON_FIBER_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.RED_CARBON_FIBER_BLOCK)
                 .pattern("RRR")
                 .pattern("RCR")
                 .pattern("RRR")
-                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('C', CVABlocks.CARBON_FIBER_BLOCK)
                 .define('R',Items.RED_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGENTA_CARBON_FIBER_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.MAGENTA_CARBON_FIBER_BLOCK)
                 .pattern("MMM")
                 .pattern("MCM")
                 .pattern("MMM")
-                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('C', CVABlocks.CARBON_FIBER_BLOCK)
                 .define('M', Items.MAGENTA_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_CARBON_FIBER_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.PINK_CARBON_FIBER_BLOCK)
                 .pattern("PPP")
                 .pattern("PCP")
                 .pattern("PPP")
-                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('C', CVABlocks.CARBON_FIBER_BLOCK)
                 .define('P', Items.PINK_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURPLE_CARBON_FIBER_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.PURPLE_CARBON_FIBER_BLOCK)
                 .pattern("PPP")
                 .pattern("PCP")
                 .pattern("PPP")
-                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('C', CVABlocks.CARBON_FIBER_BLOCK)
                 .define('P', Items.PURPLE_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BROWN_CARBON_FIBER_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.BROWN_CARBON_FIBER_BLOCK)
                 .pattern("BBB")
                 .pattern("BCB")
                 .pattern("BBB")
-                .define('C', ModBlocks.CARBON_FIBER_BLOCK)
+                .define('C', CVABlocks.CARBON_FIBER_BLOCK)
                 .define('B', Items.BROWN_DYE)
-                .unlockedBy("has_carbon", has(ModItems.CARBON))
+                .unlockedBy("has_carbon", has(CVAItems.CARBON))
                 .save(recipeOutput);
     }
 

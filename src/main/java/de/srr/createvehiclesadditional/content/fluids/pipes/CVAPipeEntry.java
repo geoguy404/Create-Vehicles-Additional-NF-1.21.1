@@ -97,9 +97,6 @@ public class CVAPipeEntry {
                         switch (this.material){
                             case CARBON -> CVAPipeAttachmentModel::withAOCarbon;
                             case STEEL -> CVAPipeAttachmentModel::withAOSteel;
-//                            case ALUMINUM -> CVAPipeAttachmentModel::withAOAluminum;
-//                            case CAST_IRON -> CVAPipeAttachmentModel::withAOCastIron;
-//                            case PLASTIC -> CVAPipeAttachmentModel::withAOPlastic;
                         }))
                 .item()
                 .transform(customItemModel())
@@ -143,9 +140,6 @@ public class CVAPipeEntry {
                         switch (this.material){
                             case CARBON -> CVAPipeAttachmentModel::withAOCarbon;
                             case STEEL -> CVAPipeAttachmentModel::withAOSteel;
-//                            case ALUMINUM -> CVAPipeAttachmentModel::withAOAluminum;
-//                            case CAST_IRON -> CVAPipeAttachmentModel::withAOCastIron;
-//                            case PLASTIC -> CVAPipeAttachmentModel::withAOPlastic;
                         }))
                 .loot((p, b) -> p.dropOther(b, this.pipe.get()))
                 .register();
@@ -160,9 +154,6 @@ public class CVAPipeEntry {
                         switch (this.material){
                             case CARBON -> CVAPipeAttachmentModel::withAOCarbon;
                             case STEEL -> CVAPipeAttachmentModel::withAOSteel;
-//                            case ALUMINUM -> CVAPipeAttachmentModel::withAOAluminum;
-//                            case CAST_IRON -> CVAPipeAttachmentModel::withAOCastIron;
-//                            case PLASTIC -> CVAPipeAttachmentModel::withAOPlastic;
                         }))
                 .transform(CVAStress.setImpact(4.0))
                 .item()
