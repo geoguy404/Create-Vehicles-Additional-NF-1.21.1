@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "createvehiclesadditional:carbon_fiber_block"
+    },
+    "Y": {
+      "item": "minecraft:yellow_dye"
+    }
+  },
+  "pattern": [
+    "YYY",
+    "YCY",
+    "YYY"
+  ],
+  "result": {
+    "count": 1,
+    "id": "createvehiclesadditional:yellow_carbon_fiber_block"
+  }
+}

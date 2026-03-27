@@ -1,0 +1,27 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"0": "createvehiclesadditional:block/element_separator",
+		"1": "createvehiclesadditional:block/tubes",
+		"2": "createvehiclesadditional:block/window",
+		"particle": "createvehiclesadditional:block/element_separator"
+	},
+	"elements": [
+      {
+        "name": "Shaft_Connector",
+        "from": [6, 6, 15],
+        "to": [10, 10, 16],
+        "rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 15]},
+        "faces": {
+          "north": {"uv": [6.8825, 4.1325, 7.3675, 4.6175], "texture": "#0"},
+          "east": {"uv": [5.2575, 7.8825, 5.3675, 8.3675], "texture": "#0"},
+          "south": {"uv": [6.8825, 4.6325, 7.3675, 5.1175], "texture": "#0"},
+          "west": {"uv": [3.3825, 7.8825, 3.4925, 8.3675], "texture": "#0"},
+          "up": {"uv": [5.4925, 8.3675, 5.3825, 7.8825], "rotation": 270, "texture": "#0"},
+          "down": {"uv": [8.1175, 5.2575, 8.0075, 5.7425], "rotation": 90, "texture": "#0"}
+        }
+      }
+    ]
+}

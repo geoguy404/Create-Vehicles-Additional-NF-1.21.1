@@ -1,0 +1,27 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"0": "createvehiclesadditional:block/element_separator",
+		"1": "createvehiclesadditional:block/tubes",
+		"2": "createvehiclesadditional:block/window",
+		"particle": "createvehiclesadditional:block/element_separator"
+	},
+	"elements": [
+      {
+        "name": "Hatch2",
+        "from": [2.001, 15.001, 4.001],
+        "to": [13.999, 15.999, 7.999],
+        "rotation": {"angle": 0, "axis": "x", "origin": [8, 15, 4]},
+        "faces": {
+          "north": {"uv": [7.1325, 2.7575, 8.6175, 2.8675], "texture": "#0"},
+          "east": {"uv": [1.3825, 8.0075, 1.8675, 8.1175], "texture": "#0"},
+          "south": {"uv": [7.1325, 2.8825, 8.6175, 2.9925], "texture": "#0"},
+          "west": {"uv": [7.8825, 0.3825, 8.3675, 0.4925], "texture": "#0"},
+          "up": {"uv": [6.4925, 6.7425, 6.0075, 5.2575], "rotation": 270, "texture": "#0"},
+          "down": {"uv": [2.4925, 6.1325, 2.0075, 7.6175], "rotation": 90, "texture": "#0"}
+        }
+		}
+	]
+}

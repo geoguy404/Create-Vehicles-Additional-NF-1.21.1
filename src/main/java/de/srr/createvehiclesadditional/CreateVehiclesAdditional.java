@@ -9,6 +9,8 @@ import de.srr.createvehiclesadditional.Items.ModCreativeModeTabs;
 import de.srr.createvehiclesadditional.Items.ModItems;
 import net.createmod.catnip.lang.FontHelper;
 import net.minecraft.resources.ResourceKey;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -63,6 +65,7 @@ public class CreateVehiclesAdditional {
 
         modEventBus.addListener(this::addCreative);
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::registerCapabilities);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
@@ -71,6 +74,16 @@ public class CreateVehiclesAdditional {
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        
+        
+    }
+
+    private void registerCapabilities(RegisterCapabilitiesEvent event) {
+        event.registerBlockEntity(
+                Capabilities.FluidHandler.BLOCK,
+                ModBlockEntities.ELEMENT_SEPARATOR.get(),
+                (be, side) -> be.getTank()
+        );
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {

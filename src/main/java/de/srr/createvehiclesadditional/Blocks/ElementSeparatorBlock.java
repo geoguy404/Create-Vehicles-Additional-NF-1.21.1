@@ -1,16 +1,24 @@
 package de.srr.createvehiclesadditional.Blocks;
 
+import com.simibubi.create.Create;
 import com.simibubi.create.content.kinetics.base.HorizontalKineticBlock;
 import com.simibubi.create.foundation.block.IBE;
+import com.simibubi.create.foundation.fluid.FluidHelper;
 import de.srr.createvehiclesadditional.BlockEntities.ElementSeparatorBlockEntity;
 import de.srr.createvehiclesadditional.registry.ModBlockEntities;
 import de.srr.createvehiclesadditional.util.ShapeUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -97,6 +105,14 @@ public class ElementSeparatorBlock extends HorizontalKineticBlock implements IBE
         return face == state.getValue(HORIZONTAL_FACING).getOpposite();
     }
 
+    public float getStressImpact(BlockState state) {
+        return 4f; // 4 SU - später über Config anpassbar
+    }
+
+    @Override
+    public SpeedLevel getMinimumRequiredSpeedLevel() {
+        return SpeedLevel.MEDIUM;
+    }
 
     //Block Entity
     @Override
@@ -108,5 +124,29 @@ public class ElementSeparatorBlock extends HorizontalKineticBlock implements IBE
     public BlockEntityType<? extends ElementSeparatorBlockEntity> getBlockEntityType() {
         return ModBlockEntities.ELEMENT_SEPARATOR.get();
     }
+
+    //Fluid Implementation
+    @Override
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+
+        if (level.isClientSide)
+            return ItemInteractionResult.SUCCESS;
+
+        if (!(level.getBlockEntity(pos) instanceof ElementSeparatorBlockEntity be)) {
+            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+        }
+
+        boolean filled = FluidHelper.tryEmptyItemIntoBE(level, player, hand, stack, be);
+
+        if (filled) {
+            Create.LOGGER.info("Tank nach Füllen: {}/{}", be.getTank().getFluidAmount(), be.getTank().getCapacity());
+            return ItemInteractionResult.SUCCESS;
+        }
+
+        boolean drained = FluidHelper.tryFillItemFromBE(level, player, hand, stack, be);
+        Create.LOGGER.info("Tank nach leeren: {}/{}", be.getTank().getFluidAmount(), be.getTank().getCapacity());
+        return drained ? ItemInteractionResult.SUCCESS : ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+    }
+
 
 }
