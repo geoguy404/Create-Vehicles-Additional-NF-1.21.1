@@ -43,6 +43,36 @@ public class ModItems {
             .item("carbon_fiber_mass", Item::new)
             .register();
 
+    public static final ItemEntry<Item> STEEL_INGOT = REGISTRATE
+            .item("steel_ingot", Item::new)
+            .lang("Steel Ingot")
+            .register();
+
+    public static final ItemEntry<Item> CAST_IRON_INGOT = REGISTRATE
+            .item("cast_iron_ingot", Item::new)
+            .lang("Cast Iron Ingot")
+            .register();
+
+    public static final ItemEntry<Item> COAL_COKE = REGISTRATE
+            .item("coal_coke", Item::new)
+            .lang("Coal Coke")
+            .register();
+
+    public static final ItemEntry<Item> COAL_COKE_DUST = REGISTRATE
+            .item("coal_coke_dust", Item::new)
+            .lang("Coal Coke Dust")
+            .register();
+
+    public static final ItemEntry<Item> LIMESAND = REGISTRATE
+            .item("limesand", Item::new)
+            .lang("Limesand")
+            .register();
+
+    public static final ItemEntry<Item> CAST_IRON_SHEET = REGISTRATE
+            .item("cast_iron_sheet", Item::new)
+            .lang("Cast Iron Sheet")
+            .register();
+
     public static final ItemEntry<Item> INCA_KOLA_BOTTLE = REGISTRATE
             .item("inca_kola_bottle", Item::new)
             .properties(p -> p.food(ModFoodProperties.INCA_KOLA_BOTTLE))

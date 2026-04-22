@@ -1,6 +1,9 @@
 {
   "values": [
     "createvehiclesadditional:block_of_carbon",
-    "createvehiclesadditional:temperature_oven"
+    "createvehiclesadditional:temperature_oven",
+    "createvehiclesadditional:steel_block",
+    "createvehiclesadditional:steel_casing",
+    "createvehiclesadditional:cast_iron_block"
   ]
 }
