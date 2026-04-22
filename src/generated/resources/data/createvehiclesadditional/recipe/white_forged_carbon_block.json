@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "createvehiclesadditional:forged_carbon_block"
+    },
+    "W": {
+      "item": "minecraft:white_dye"
+    }
+  },
+  "pattern": [
+    "WWW",
+    "WFW",
+    "WWW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "createvehiclesadditional:white_forged_carbon_block"
+  }
+}

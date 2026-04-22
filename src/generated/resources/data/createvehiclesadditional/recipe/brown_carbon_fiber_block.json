@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:brown_dye"
+    },
+    "C": {
+      "item": "createvehiclesadditional:carbon_fiber_block"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BCB",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "createvehiclesadditional:brown_carbon_fiber_block"
+  }
+}

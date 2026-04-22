@@ -95,7 +95,7 @@ public abstract class FluidPipeBlockMixin extends PipeBlock implements SimpleWat
         if (clickedFace.getAxis() == axis)
             return InteractionResult.PASS;
         if (!world.isClientSide) {
-            withBlockEntityDo(world, pos, fpte -> fpte.getBehaviour(FluidTransportBehaviour.TYPE).interfaces.values()
+            withBlockEntityDo(world, pos, fpbe -> fpbe.getBehaviour(FluidTransportBehaviour.TYPE).interfaces.values()
                     .stream()
                     .filter(pc -> pc != null && pc.hasFlow())
                     .findAny()
