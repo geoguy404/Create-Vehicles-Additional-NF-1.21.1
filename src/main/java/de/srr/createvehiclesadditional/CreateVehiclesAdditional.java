@@ -3,12 +3,9 @@ package de.srr.createvehiclesadditional;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
-import de.srr.createvehiclesadditional.BlockEntities.ModBlockEntities;
-import de.srr.createvehiclesadditional.Blocks.ModBlocks;
-import de.srr.createvehiclesadditional.Items.ModCreativeModeTabs;
-import de.srr.createvehiclesadditional.Items.ModItems;
 import net.createmod.catnip.lang.FontHelper;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -55,10 +52,10 @@ public class CreateVehiclesAdditional {
         REGISTRATE.registerEventListeners(modEventBus);
 
 
-        ModBlocks.register();
-        ModItems.register();
-        ModBlockEntities.register();
-        ModCreativeModeTabs.register(modEventBus);
+        CVABlocks.register();
+        CVAItems.register();
+        CVABlockEntities.register();
+        CVACreativeModeTabs.register(modEventBus);
 
 
         modEventBus.addListener(this::addCreative);
@@ -74,6 +71,9 @@ public class CreateVehiclesAdditional {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
+    }
+    public static ResourceLocation asResource(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
     }
 
     // Add the example block item to the building blocks tab
