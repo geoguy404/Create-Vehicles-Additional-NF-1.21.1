@@ -1,6 +1,10 @@
 package de.srr.createvehiclesadditional;
 
 import de.srr.createvehiclesadditional.content.kinectics.elementSeparator.ElementSeparatorRenderer;
+import de.srr.createvehiclesadditional.BlockEntities.ModBlockEntities;
+import de.srr.createvehiclesadditional.BlockEntityRenderers.ElementSeparatorRenderer;
+import de.srr.createvehiclesadditional.Blocks.ModBlocks;
+import de.srr.createvehiclesadditional.registry.ModPartialModels;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -31,7 +35,7 @@ public class CreateVehiclesAdditionalClient {
 
         // Element Separator
         event.registerBlockEntityRenderer(
-                CVABlockEntities.ELEMENT_SEPARATOR.get(),
+                ModBlockEntities.ELEMENT_SEPARATOR.get(),
                 ElementSeparatorRenderer::new
         );
     }
