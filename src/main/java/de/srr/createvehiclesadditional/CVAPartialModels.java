@@ -12,21 +12,16 @@ import java.util.*;
 
 public class CVAPartialModels {
 
-    public static final List<PartialModel> SEGMENTS = new ArrayList<>();
+    //public static final List<PartialModel> SEGMENTS = new ArrayList<>();
     public static final Map<CVAPipes.PipeMaterial, PartialModel> PIPE_CASINGS = new HashMap<>();
     public static final Map<ResourceLocation, Couple<PartialModel>> FOLDING_DOORS = new HashMap<>();
     public static final Map<CVAPipes.PipeMaterial, Map<FluidTransportBehaviour.AttachmentTypes.ComponentPartials, Map<Direction, PartialModel>>> PIPE_ATTACHMENTS = new HashMap<>();
 
-    static {
 
-        for (int i = 0; i < 21; i++) {
-
-            SEGMENTS.add(block("segmented_display/segments/" + i));
-
-        }
-
-
-    }
+    // SEPARATOR
+    public static PartialModel SEPARATOR_SHAFT;
+    public static PartialModel SEPARATOR_LID1;
+    public static PartialModel SEPARATOR_LID2;
 
     static {
 
@@ -48,22 +43,25 @@ public class CVAPartialModels {
             PIPE_CASINGS.put(material, block(material.name + "_pipe/casing"));
 
         }
-        ////////////////
-        putFoldingDoor("steel_door");
 
     }
 
-
-    private static void putFoldingDoor(String path) {
-        FOLDING_DOORS.put(CreateVehiclesAdditional.asResource(path),
-                Couple.create(block(path + "/fold_left"), block(path + "/fold_right")));
-    }
 
     private static PartialModel block(String path) {
         return PartialModel.of(CreateVehiclesAdditional.asResource("block/" + path));
     }
 
     public static void init() {
+
+        // SEPARATOR
+        SEPARATOR_SHAFT = PartialModel.of(
+                ResourceLocation.fromNamespaceAndPath(CreateVehiclesAdditional.MOD_ID, "block/separator_shaft"));
+        SEPARATOR_LID1 = PartialModel.of(
+                ResourceLocation.fromNamespaceAndPath(CreateVehiclesAdditional.MOD_ID, "block/separator_lid1"));
+        SEPARATOR_LID2 = PartialModel.of(
+                ResourceLocation.fromNamespaceAndPath(CreateVehiclesAdditional.MOD_ID, "block/separator_lid2"));
+
+
     }
 
 }

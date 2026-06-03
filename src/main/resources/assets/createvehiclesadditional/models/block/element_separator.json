@@ -1,7 +1,7 @@
 {
 	"format_version": "1.21.1",
 	"credit": "Made with Blockbench",
-  "parent": "minecraft:block/block",
+	"parent": "minecraft:block/block",
 	"textures": {
 		"1": "createvehiclesadditional:block/element_separator",
 		"3": "createvehiclesadditional:block/window",
