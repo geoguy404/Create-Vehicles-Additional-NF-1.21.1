@@ -1,7 +1,9 @@
 {
   "values": [
     "createvehiclesadditional:block_of_carbon",
-    "createvehiclesadditional:carbon_fiber_block",
+    "createvehiclesadditional:steel_block",
+    "createvehiclesadditional:steel_casing",
+    "createvehiclesadditional:cast_iron_block",
     "createvehiclesadditional:golden_forged_carbon_block",
     "createvehiclesadditional:forged_carbon_block",
     "createvehiclesadditional:black_forged_carbon_bloc",
@@ -21,6 +23,7 @@
     "createvehiclesadditional:purple_forged_carbon_block",
     "createvehiclesadditional:brown_forged_carbon_block",
     "createvehiclesadditional:golden_carbon_fiber_block",
+    "createvehiclesadditional:carbon_fiber_block",
     "createvehiclesadditional:black_carbon_fiber_block",
     "createvehiclesadditional:gray_carbon_fiber_block",
     "createvehiclesadditional:light_gray_carbon_fiber_block",
@@ -37,17 +40,6 @@
     "createvehiclesadditional:magenta_carbon_fiber_block",
     "createvehiclesadditional:purple_carbon_fiber_block",
     "createvehiclesadditional:brown_carbon_fiber_block",
-    "createvehiclesadditional:carbon_pipe",
-    "createvehiclesadditional:encased_carbon_pipe",
-    "createvehiclesadditional:glass_carbon_pipe",
-    "createvehiclesadditional:carbon_mechanical_pump",
-    "createvehiclesadditional:carbon_smart_fluid_pipe",
-    "createvehiclesadditional:carbon_fluid_valve",
-    "createvehiclesadditional:steel_pipe",
-    "createvehiclesadditional:encased_steel_pipe",
-    "createvehiclesadditional:glass_steel_pipe",
-    "createvehiclesadditional:steel_mechanical_pump",
-    "createvehiclesadditional:steel_smart_fluid_pipe",
-    "createvehiclesadditional:steel_fluid_valve"
+    "createvehiclesadditional:gas_pipe"
   ]
 }
