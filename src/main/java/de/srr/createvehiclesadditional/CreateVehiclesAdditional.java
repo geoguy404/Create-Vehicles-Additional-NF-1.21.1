@@ -3,12 +3,11 @@ package de.srr.createvehiclesadditional;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
-import de.srr.createvehiclesadditional.BlockEntities.ModBlockEntities;
-import de.srr.createvehiclesadditional.Blocks.ModBlocks;
-import de.srr.createvehiclesadditional.Items.ModCreativeModeTabs;
-import de.srr.createvehiclesadditional.Items.ModItems;
 import net.createmod.catnip.lang.FontHelper;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -79,7 +78,7 @@ public class CreateVehiclesAdditional {
     private void registerCapabilities(RegisterCapabilitiesEvent event) {
         event.registerBlockEntity(
                 Capabilities.FluidHandler.BLOCK,
-                ModBlockEntities.ELEMENT_SEPARATOR.get(),
+                CVABlockEntities.ELEMENT_SEPARATOR.get(),
                 (be, side) -> be.getTank()
         );
     }
