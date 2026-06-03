@@ -24,9 +24,18 @@ public class CVAItems {
             .properties(p -> p.rarity(Rarity.UNCOMMON))
             .register();
 
+    public static final ItemEntry<Item> CARBON_FIBER_MASS = REGISTRATE
+            .item("carbon_fiber_mass", Item::new)
+            .register();
+
     public static final ItemEntry<Item> CARBON_ALLOY = REGISTRATE
             .item("carbon_alloy", Item::new)
             .properties(p -> p.rarity(Rarity.UNCOMMON))
+            .register();
+
+    public static final ItemEntry<Item> FORGED_CARBON = REGISTRATE
+            .item("forged_carbon", Item::new)
+            .lang("Forged Carbon")
             .register();
 
     public static final ItemEntry<Item> CARBON_SHEET = REGISTRATE
@@ -38,9 +47,7 @@ public class CVAItems {
             .properties(p -> p.rarity(Rarity.UNCOMMON))
             .register();
 
-    public static final ItemEntry<Item> CARBON_FIBER_MASS = REGISTRATE
-            .item("carbon_fiber_mass", Item::new)
-            .register();
+
 
     public static final ItemEntry<Item> STEEL_INGOT = REGISTRATE
             .item("steel_ingot", Item::new)
@@ -106,10 +113,7 @@ public class CVAItems {
             .lang("Carbon Fiber")
             .register();
 
-    public static final ItemEntry<Item> FORGED_CARBON = REGISTRATE
-            .item("forged_carbon", Item::new)
-            .lang("Forged Carbon")
-            .register();
+
 
     public static final ItemEntry<AxeItem> CARBON_AXE = REGISTRATE
             .item("carbon_axe", p -> new AxeItem(

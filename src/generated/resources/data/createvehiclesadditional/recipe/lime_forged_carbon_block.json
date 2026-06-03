@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "createvehiclesadditional:forged_carbon_block"
+    },
+    "L": {
+      "item": "minecraft:lime_dye"
+    }
+  },
+  "pattern": [
+    "LLL",
+    "LFL",
+    "LLL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "createvehiclesadditional:lime_forged_carbon_block"
+  }
+}

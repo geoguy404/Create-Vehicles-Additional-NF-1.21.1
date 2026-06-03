@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "createvehiclesadditional:forged_carbon_block"
+    },
+    "M": {
+      "item": "minecraft:magenta_dye"
+    }
+  },
+  "pattern": [
+    "MMM",
+    "MFM",
+    "MMM"
+  ],
+  "result": {
+    "count": 1,
+    "id": "createvehiclesadditional:magenta_forged_carbon_block"
+  }
+}

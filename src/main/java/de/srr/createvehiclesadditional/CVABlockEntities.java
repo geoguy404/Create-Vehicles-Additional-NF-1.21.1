@@ -32,6 +32,7 @@ public class CVABlockEntities {
             .validBlocks(CVABlocks.ELEMENT_SEPARATOR)
             .register();
 
+
     public static final BlockEntityEntry<CVAPipeBlockEntity> CVA_PIPE = REGISTRATE
             .blockEntity("cva_pipe", CVAPipeBlockEntity::new)
             .validBlocks(
