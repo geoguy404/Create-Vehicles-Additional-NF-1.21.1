@@ -21,11 +21,7 @@ import de.srr.createvehiclesadditional.content.kinectics.elementSeparator.Elemen
 import static de.srr.createvehiclesadditional.CreateVehiclesAdditional.REGISTRATE;
 
 public class CVABlockEntities {
-
-//    public static final BlockEntityEntry<GasPipeBlockEntity> GAS_PIPE = REGISTRATE
-//            .blockEntity("gas_pipe", GasPipeBlockEntity::new)
-//            .validBlocks(CVABlocks.GAS_PIPE)
-//            .register();
+    
 
     public static final BlockEntityEntry<ElementSeparatorBlockEntity> ELEMENT_SEPARATOR = REGISTRATE
             .blockEntity("element_separator", ElementSeparatorBlockEntity::new)

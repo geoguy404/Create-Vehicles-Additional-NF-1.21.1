@@ -1,7 +1,8 @@
-package de.srr.createvehiclesadditional.Blocks;
+package de.srr.createvehiclesadditional;
 
 import com.tterrag.registrate.providers.loot.RegistrateBlockLootTables;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import de.srr.createvehiclesadditional.content.kinectics.elementSeparator.ElementSeparatorBlock;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -10,7 +11,7 @@ import net.minecraft.world.level.block.SoundType;
 import static de.srr.createvehiclesadditional.CreateVehiclesAdditional.REGISTRATE;
 
 
-public class ModBlocks {
+public class CVABlocks {
 
 
     //------------------DECO BLOCKS------------------//
@@ -294,21 +295,7 @@ public class ModBlocks {
             .loot(RegistrateBlockLootTables::dropSelf)
             .lang("Brown Carbon Fiber Block")
             .register();
-
-   //------------------SPECIAL BLOCKS------------------//
-    public static final BlockEntry<GasPipeBlock> GAS_PIPE = REGISTRATE
-            .block("gas_pipe", GasPipeBlock::new)
-            .initialProperties(() -> Blocks.COPPER_BLOCK)
-            .properties(p -> p.strength(4f).requiresCorrectToolForDrops().sound(SoundType.COPPER))
-            .blockstate((ctx, prov) -> {})
-            .tag(BlockTags.NEEDS_STONE_TOOL)
-            .item()
-            .model((ctx, prov) -> {
-            }).build()
-            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
-            .loot(RegistrateBlockLootTables::dropSelf)
-            .lang("Gas Pipe")
-            .register();
+    
 
 //    //------------------KINETIC BLOCKS------------------//
 public static final BlockEntry<ElementSeparatorBlock> ELEMENT_SEPARATOR = REGISTRATE

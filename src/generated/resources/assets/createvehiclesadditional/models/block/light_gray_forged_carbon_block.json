@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "createvehiclesadditional:block/light_gray_forged_carbon_block"
-  }
-}

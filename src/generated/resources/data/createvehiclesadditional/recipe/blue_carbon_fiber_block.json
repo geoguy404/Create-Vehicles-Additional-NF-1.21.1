@@ -5,13 +5,13 @@
     "B": {
       "item": "minecraft:blue_dye"
     },
-    "F": {
-      "item": "createvehiclesadditional:forged_carbon_block"
+    "C": {
+      "item": "createvehiclesadditional:carbon_fiber_block"
     }
   },
   "pattern": [
     "BBB",
-    "BFB",
+    "BCB",
     "BBB"
   ],
   "result": {
