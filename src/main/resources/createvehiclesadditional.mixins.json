@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "de.srr.createvehiclesadditional.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "FluidPipeBlockMixin",
+    "PipeAttachmentModelMixin"
+  ],
+  "client": [
+
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -24,6 +24,17 @@
     "createvehiclesadditional:magenta_carbon_fiber_block",
     "createvehiclesadditional:purple_carbon_fiber_block",
     "createvehiclesadditional:brown_carbon_fiber_block",
-    "createvehiclesadditional:gas_pipe"
+    "createvehiclesadditional:carbon_pipe",
+    "createvehiclesadditional:encased_carbon_pipe",
+    "createvehiclesadditional:glass_carbon_pipe",
+    "createvehiclesadditional:carbon_mechanical_pump",
+    "createvehiclesadditional:carbon_smart_fluid_pipe",
+    "createvehiclesadditional:carbon_fluid_valve",
+    "createvehiclesadditional:steel_pipe",
+    "createvehiclesadditional:encased_steel_pipe",
+    "createvehiclesadditional:glass_steel_pipe",
+    "createvehiclesadditional:steel_mechanical_pump",
+    "createvehiclesadditional:steel_smart_fluid_pipe",
+    "createvehiclesadditional:steel_fluid_valve"
   ]
 }

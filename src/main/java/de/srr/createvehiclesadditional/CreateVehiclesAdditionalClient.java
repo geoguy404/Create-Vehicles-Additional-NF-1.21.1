@@ -1,5 +1,6 @@
 package de.srr.createvehiclesadditional;
 
+import de.srr.createvehiclesadditional.content.kinectics.elementSeparator.ElementSeparatorRenderer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -9,6 +10,7 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
@@ -24,6 +26,16 @@ public class CreateVehiclesAdditionalClient {
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
     }
 
+    @SubscribeEvent
+    public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+
+        // Element Separator
+        event.registerBlockEntityRenderer(
+                CVABlockEntities.ELEMENT_SEPARATOR.get(),
+                ElementSeparatorRenderer::new
+        );
+    }
+
     //setRenderLayer on line 37 is flagged as deprecated (needs to be changed in future)
     @SuppressWarnings("deprecation")
     @SubscribeEvent
@@ -31,15 +43,21 @@ public class CreateVehiclesAdditionalClient {
         // Some client setup code
         CreateVehiclesAdditional.LOGGER.info("HELLO FROM CLIENT SETUP");
         CreateVehiclesAdditional.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+
         CVAPartialModels.init();
+
         // to load transparent Textures correctly
         event.enqueueWork(() -> {
             ItemBlockRenderTypes.setRenderLayer(
                     CVABlocks.ELEMENT_SEPARATOR.get(),
                     RenderType.cutout()
             );
-           //add new Block with transparent Texture here
+            //add new Block with transparent Texture here
             //ItemBlockRenderTypes.setRenderLayer(ModBlocks.ELEMENT_SEPARATOR.get(), RenderType.cutout() // oder translucent());
         });
+
+//        event.enqueueWork(() -> {
+//            PonderRegistration.register(); // NEU
+//        });
     }
 }
