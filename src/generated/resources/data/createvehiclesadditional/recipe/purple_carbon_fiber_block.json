@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "createvehiclesadditional:carbon_fiber_block"
+    },
+    "P": {
+      "item": "minecraft:purple_dye"
+    }
+  },
+  "pattern": [
+    "PPP",
+    "PCP",
+    "PPP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "createvehiclesadditional:purple_carbon_fiber_block"
+  }
+}

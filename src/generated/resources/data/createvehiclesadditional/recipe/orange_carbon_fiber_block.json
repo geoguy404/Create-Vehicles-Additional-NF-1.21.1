@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "createvehiclesadditional:carbon_fiber_block"
+    },
+    "O": {
+      "item": "minecraft:orange_dye"
+    }
+  },
+  "pattern": [
+    "OOO",
+    "OCO",
+    "OOO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "createvehiclesadditional:orange_carbon_fiber_block"
+  }
+}

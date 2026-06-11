@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "createvehiclesadditional:forged_carbon_block"
+    },
+    "G": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "GFG",
+    "GGG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "createvehiclesadditional:golden_forged_carbon_block"
+  }
+}
