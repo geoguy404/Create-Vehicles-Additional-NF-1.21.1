@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cast_iron": {
+      "conditions": {
+        "items": [
+          {
+            "items": "createvehiclesadditional:cast_iron_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "createvehiclesadditional:steel_mold"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cast_iron"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "createvehiclesadditional:steel_mold"
+    ]
+  }
+}

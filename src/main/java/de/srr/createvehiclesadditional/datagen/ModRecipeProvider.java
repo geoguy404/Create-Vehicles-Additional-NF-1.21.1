@@ -27,6 +27,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         //List<ItemLike>
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,CVAItems.CAST_IRON_INGOT,9)
+                .requires(CVABlocks.CAST_IRON_BLOCK)
+                .unlockedBy("has_cast_iron_ingot", has(CVAItems.CAST_IRON_INGOT))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVABlocks.CAST_IRON_BLOCK)
+                .pattern("CCC")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', CVAItems.CAST_IRON_INGOT)
+                .unlockedBy("has_cast_iron_ingot", has(CVAItems.CAST_IRON_INGOT))
+                .save(recipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVAItems.CARBON_HOE)
                 .pattern("AA ")
                 .pattern(" F ")
@@ -251,6 +264,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('C', CVABlocks.CARBON_FIBER_BLOCK)
                 .define('B', Items.BROWN_DYE)
                 .unlockedBy("has_carbon", has(CVAItems.CARBON))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CVAItems.STEEL_MOLD)
+                .pattern("I I")
+                .pattern("ISI")
+                .define('I', CVAItems.CAST_IRON_INGOT)
+                .define('S', CVAItems.CAST_IRON_SHEET)
+                .unlockedBy("has_cast_iron", has(CVAItems.CAST_IRON_INGOT))
                 .save(recipeOutput);
     }
 

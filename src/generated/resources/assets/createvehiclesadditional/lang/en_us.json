@@ -20,6 +20,7 @@
   "block.createvehiclesadditional.golden_forged_carbon_block": "Golden Forged Carbon Block",
   "block.createvehiclesadditional.gray_carbon_fiber_block": "Gray Carbon Fiber Block",
   "block.createvehiclesadditional.green_carbon_fiber_block": "Green Carbon Fiber Block",
+  "block.createvehiclesadditional.inca_kola": "Inca Kola",
   "block.createvehiclesadditional.light_blue_carbon_fiber_block": "Light Blue Carbon Fiber Block",
   "block.createvehiclesadditional.light_gray_carbon_fiber_block": "Light Gray Carbon Fiber Block",
   "block.createvehiclesadditional.lime_carbon_fiber_block": "Lime Carbon Fiber Block",
@@ -37,6 +38,7 @@
   "block.createvehiclesadditional.temperature_oven": "Temperature Oven",
   "block.createvehiclesadditional.white_carbon_fiber_block": "White Carbon Fiber Block",
   "block.createvehiclesadditional.yellow_carbon_fiber_block": "Yellow Carbon Fiber Block",
+  "fluid.createvehiclesadditional.inca_kola": "Inca Kola",
   "item.createvehiclesadditional.bucket_of_acrylonitrile": "Bucket Of Acrylonitrile",
   "item.createvehiclesadditional.carbon": "Carbon",
   "item.createvehiclesadditional.carbon_alloy": "Carbon Alloy",
@@ -57,11 +59,15 @@
   "item.createvehiclesadditional.gas_tank": "Gas Tank",
   "item.createvehiclesadditional.hydrogen_tank": "Hydrogen Tank",
   "item.createvehiclesadditional.inca_kola_bottle": "Inca Kola Bottle",
+  "item.createvehiclesadditional.inca_kola_bucket": "Inca Kola Bucket",
   "item.createvehiclesadditional.limesand": "Limesand",
   "item.createvehiclesadditional.nitrogen_tank": "Nitrogen Tank",
   "item.createvehiclesadditional.oxygen_tank": "Oxygen Tank",
   "item.createvehiclesadditional.polyacrylonitrile_powder": "Polyacrylonitrile Powder",
   "item.createvehiclesadditional.propylene_tank": "Propylene Tank",
   "item.createvehiclesadditional.steel_ingot": "Steel Ingot",
-  "item.createvehiclesadditional.sulfur_tank": "Sulfur Tank"
+  "item.createvehiclesadditional.steel_mold": "Steel Mold",
+  "item.createvehiclesadditional.sulfur_tank": "Sulfur Tank",
+  "item.createvehiclesadditional.unprocessed_cast_iron_ingot": "Unprocessed Cast Iron Ingot",
+  "item.createvehiclesadditional.unprocessed_cast_iron_sheet": "Unprocessed Cast Iron Sheet"
 }

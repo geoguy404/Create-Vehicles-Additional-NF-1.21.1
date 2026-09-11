@@ -11,6 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 
 import net.neoforged.neoforge.common.ModConfigSpec;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
@@ -43,7 +44,7 @@ public class CVAStress extends ConfigBase {
     }
 
     @Override
-    public String getName() {
+    public @NotNull String getName() {
         return "stressValues.v" + VERSION;
     }
 

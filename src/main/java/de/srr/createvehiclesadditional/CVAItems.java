@@ -1,5 +1,6 @@
 package de.srr.createvehiclesadditional;
 
+import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.*;
 
@@ -54,9 +55,19 @@ public class CVAItems {
             .lang("Steel Ingot")
             .register();
 
+    public static final ItemEntry<Item> STEEL_MOLD = REGISTRATE
+            .item("steel_mold", Item::new)
+            .lang("Steel Mold")
+            .register();
+
     public static final ItemEntry<Item> CAST_IRON_INGOT = REGISTRATE
             .item("cast_iron_ingot", Item::new)
             .lang("Cast Iron Ingot")
+            .register();
+
+    public static final ItemEntry<Item> CAST_IRON_SHEET = REGISTRATE
+            .item("cast_iron_sheet", Item::new)
+            .lang("Cast Iron Sheet")
             .register();
 
     public static final ItemEntry<Item> COAL_COKE = REGISTRATE
@@ -74,14 +85,10 @@ public class CVAItems {
             .lang("Limesand")
             .register();
 
-    public static final ItemEntry<Item> CAST_IRON_SHEET = REGISTRATE
-            .item("cast_iron_sheet", Item::new)
-            .lang("Cast Iron Sheet")
-            .register();
 
     public static final ItemEntry<Item> INCA_KOLA_BOTTLE = REGISTRATE
             .item("inca_kola_bottle", Item::new)
-            .properties(p -> p.food(CVAFoodProperties.INCA_KOLA_BOTTLE))
+            .properties(p -> p.food(CVAFoodProperties.INCA_KOLA_BOTTLE).rarity(Rarity.EPIC) )
             .register();
 
     public static final ItemEntry<Item> GAS_TANK = REGISTRATE
@@ -149,6 +156,16 @@ public class CVAItems {
                 .properties(p -> p.attributes(ShovelItem.createAttributes(CVAToolTiers.CARBON,1.5f,-3.0f)))
                 .lang("Carbon Shovel")
                 .register();
+
+        public static final ItemEntry<SequencedAssemblyItem>
+            INCOMPLETE_CAST_IRON_INGOT = sequencedIngredient("unprocessed_cast_iron_ingot"),
+            INCOMPLETE_CAST_IRON_SHEET = sequencedIngredient("unprocessed_cast_iron_sheet");
+
+
+    private static ItemEntry<SequencedAssemblyItem> sequencedIngredient(String name) {
+        return REGISTRATE.item(name, SequencedAssemblyItem::new)
+                .register();
+    }
 
     public static void register() {
         // Class loading

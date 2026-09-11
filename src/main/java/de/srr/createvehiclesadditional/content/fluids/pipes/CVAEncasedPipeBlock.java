@@ -29,10 +29,7 @@ public class CVAEncasedPipeBlock extends EncasedPipeBlock {
         super(p_i48339_1_, casing);
         this.material = material;
     }
-    //@Override
-    //public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter world, BlockPos pos, Player player) {
-    //    return CVAPipes.CVA_PIPES.get(material).get(0).asStack();
-    //}
+
     @Override
     public InteractionResult onWrenched(BlockState state, UseOnContext context) {
         Level world = context.getLevel();

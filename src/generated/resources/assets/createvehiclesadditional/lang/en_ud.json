@@ -20,6 +20,7 @@
   "block.createvehiclesadditional.golden_forged_carbon_block": "ʞɔoןᗺ uoqɹɐƆ pǝbɹoℲ uǝpןo⅁",
   "block.createvehiclesadditional.gray_carbon_fiber_block": "ʞɔoןᗺ ɹǝqıℲ uoqɹɐƆ ʎɐɹ⅁",
   "block.createvehiclesadditional.green_carbon_fiber_block": "ʞɔoןᗺ ɹǝqıℲ uoqɹɐƆ uǝǝɹ⅁",
+  "block.createvehiclesadditional.inca_kola": "ɐןoʞ ɐɔuI",
   "block.createvehiclesadditional.light_blue_carbon_fiber_block": "ʞɔoןᗺ ɹǝqıℲ uoqɹɐƆ ǝnןᗺ ʇɥbıꞀ",
   "block.createvehiclesadditional.light_gray_carbon_fiber_block": "ʞɔoןᗺ ɹǝqıℲ uoqɹɐƆ ʎɐɹ⅁ ʇɥbıꞀ",
   "block.createvehiclesadditional.lime_carbon_fiber_block": "ʞɔoןᗺ ɹǝqıℲ uoqɹɐƆ ǝɯıꞀ",
@@ -37,6 +38,7 @@
   "block.createvehiclesadditional.temperature_oven": "uǝʌO ǝɹnʇɐɹǝdɯǝ⟘",
   "block.createvehiclesadditional.white_carbon_fiber_block": "ʞɔoןᗺ ɹǝqıℲ uoqɹɐƆ ǝʇıɥM",
   "block.createvehiclesadditional.yellow_carbon_fiber_block": "ʞɔoןᗺ ɹǝqıℲ uoqɹɐƆ ʍoןןǝʎ",
+  "fluid.createvehiclesadditional.inca_kola": "ɐןoʞ ɐɔuI",
   "item.createvehiclesadditional.bucket_of_acrylonitrile": "ǝןıɹʇıuoןʎɹɔⱯ ɟO ʇǝʞɔnᗺ",
   "item.createvehiclesadditional.carbon": "uoqɹɐƆ",
   "item.createvehiclesadditional.carbon_alloy": "ʎoןןⱯ uoqɹɐƆ",
@@ -57,11 +59,15 @@
   "item.createvehiclesadditional.gas_tank": "ʞuɐ⟘ sɐ⅁",
   "item.createvehiclesadditional.hydrogen_tank": "ʞuɐ⟘ uǝboɹpʎH",
   "item.createvehiclesadditional.inca_kola_bottle": "ǝןʇʇoᗺ ɐןoʞ ɐɔuI",
+  "item.createvehiclesadditional.inca_kola_bucket": "ʇǝʞɔnᗺ ɐןoʞ ɐɔuI",
   "item.createvehiclesadditional.limesand": "puɐsǝɯıꞀ",
   "item.createvehiclesadditional.nitrogen_tank": "ʞuɐ⟘ uǝboɹʇıN",
   "item.createvehiclesadditional.oxygen_tank": "ʞuɐ⟘ uǝbʎxO",
   "item.createvehiclesadditional.polyacrylonitrile_powder": "ɹǝpʍoԀ ǝןıɹʇıuoןʎɹɔɐʎןoԀ",
   "item.createvehiclesadditional.propylene_tank": "ʞuɐ⟘ ǝuǝןʎdoɹԀ",
   "item.createvehiclesadditional.steel_ingot": "ʇobuI ןǝǝʇS",
-  "item.createvehiclesadditional.sulfur_tank": "ʞuɐ⟘ ɹnɟןnS"
+  "item.createvehiclesadditional.steel_mold": "pןoW ןǝǝʇS",
+  "item.createvehiclesadditional.sulfur_tank": "ʞuɐ⟘ ɹnɟןnS",
+  "item.createvehiclesadditional.unprocessed_cast_iron_ingot": "ʇobuI uoɹI ʇsɐƆ pǝssǝɔoɹdu∩",
+  "item.createvehiclesadditional.unprocessed_cast_iron_sheet": "ʇǝǝɥS uoɹI ʇsɐƆ pǝssǝɔoɹdu∩"
 }

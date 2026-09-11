@@ -1,0 +1,22 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "minecraft:gravel"
+    }
+  ],
+  "processing_time": 100,
+  "results": [
+    {
+      "id": "minecraft:sand"
+    },
+    {
+      "chance": 0.1,
+      "id": "minecraft:flint"
+    },
+    {
+      "chance": 0.02,
+      "id": "create:crushed_raw_iron"
+    }
+  ]
+}

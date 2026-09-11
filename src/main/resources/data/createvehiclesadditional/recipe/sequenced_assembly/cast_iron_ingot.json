@@ -1,0 +1,65 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "tag": "c:ingots/iron"
+  },
+  "results": [
+    {
+      "id": "createvehiclesadditional:cast_iron_ingot"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "createvehiclesadditional:unprocessed_cast_iron_ingot"
+        },
+        [
+          {
+            "item": "minecraft:coal"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "createvehiclesadditional:unprocessed_cast_iron_ingot"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "createvehiclesadditional:unprocessed_cast_iron_ingot"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 500,
+          "fluid": "minecraft:lava"
+        }
+      ],
+      "results": [
+        {
+          "id": "createvehiclesadditional:unprocessed_cast_iron_ingot"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "createvehiclesadditional:unprocessed_cast_iron_ingot"
+        }
+      ],
+      "results": [
+        {
+          "id": "createvehiclesadditional:unprocessed_cast_iron_ingot"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "createvehiclesadditional:unprocessed_cast_iron_ingot"
+  }
+}
