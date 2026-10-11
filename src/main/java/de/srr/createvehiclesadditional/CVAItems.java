@@ -113,10 +113,7 @@ public class CVAItems {
             .lang("Carbon Fiber")
             .register();
 
-    public static final ItemEntry<Item> SCREWS = REGISTRATE
-            .item("screws", Item::new)
-            .lang("Screws")
-            .register();
+
 
     public static final ItemEntry<AxeItem> CARBON_AXE = REGISTRATE
             .item("carbon_axe", p -> new AxeItem(
@@ -152,8 +149,6 @@ public class CVAItems {
                 .properties(p -> p.attributes(ShovelItem.createAttributes(CVAToolTiers.CARBON,1.5f,-3.0f)))
                 .lang("Carbon Shovel")
                 .register();
-
-
 
     public static void register() {
         // Class loading

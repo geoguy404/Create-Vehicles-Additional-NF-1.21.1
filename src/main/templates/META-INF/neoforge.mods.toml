@@ -59,7 +59,7 @@ config="${mod_id}.mixins.json"
 # The coremods config file path is not configurable and is always loaded from META-INF/coremods.json
 
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.${mod_id}]] #optional
+[[dependencies."${mod_id}"]] #optional
     # the modid of the dependency
     modId="neoforge" #mandatory
     # The type of the dependency. Can be one of "required", "optional", "incompatible" or "discouraged" (case insensitive).
@@ -71,14 +71,14 @@ config="${mod_id}.mixins.json"
     # The version range of the dependency
     versionRange="[${neo_version},)" #mandatory
     # An ordering relationship for the dependency.
-    # BEFORE - This mod is loaded BEFORE the dependency
+    # BEFORE - This mod is loaded BEFORE the dependency6
     # AFTER - This mod is loaded AFTER the dependency
     ordering="NONE"
     # Side this dependency is applied on - BOTH, CLIENT, or SERVER
     side="BOTH"
 
 # Here's another dependency
-[[dependencies.${mod_id}]]
+[[dependencies."${mod_id}"]]
     modId="minecraft"
     type="required"
     # This version range declares a minimum of the current minecraft version up to but not including the next major version
@@ -86,7 +86,7 @@ config="${mod_id}.mixins.json"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.${mod_id}]]
+[[dependencies."${mod_id}"]]
     modId="create"
     type="required"
     versionRange="[6.0.8,6.1.0)"

@@ -1,4 +1,5 @@
 package de.srr.createvehiclesadditional.mixin;
+
 import com.mojang.serialization.MapCodec;
 import com.simibubi.create.AllBlockEntityTypes;
 import com.simibubi.create.AllBlocks;

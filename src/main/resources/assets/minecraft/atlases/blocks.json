@@ -1,0 +1,6 @@
+{
+  "sources": [
+    {"type": "single", "resource": "createvehiclesadditional:fluid/inca_kola_flow"},
+    {"type": "single", "resource": "createvehiclesadditional:fluid/inca_kola_still"}
+  ]
+}
