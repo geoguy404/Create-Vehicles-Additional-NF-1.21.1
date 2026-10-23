@@ -59,6 +59,7 @@ public class CreateVehiclesAdditional {
         CVABlocks.register();
         CVAItems.register();
         CVABlockEntities.register();
+        CVAFluids.register();
         CVACreativeModeTabs.register(modEventBus);
 
 

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cast_iron_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "createvehiclesadditional:cast_iron_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "createvehiclesadditional:cast_iron_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cast_iron_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "createvehiclesadditional:cast_iron_block"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:ore_bearing_ground/stone"
+    },
+    {
+      "tag": "c:sands/colorless"
+    },
+    {
+      "tag": "create:stone_types/limestone"
+    }
+  ],
+  "results": [
+    {
+      "count": 4,
+      "id": "create:limestone"
+    }
+  ]
+}

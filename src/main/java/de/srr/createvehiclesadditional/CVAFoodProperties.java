@@ -5,7 +5,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 
 public class CVAFoodProperties {
-    public static final FoodProperties INCA_KOLA_BOTTLE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.25f)
+    public static final FoodProperties INCA_KOLA_BOTTLE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.25f).alwaysEdible()
             .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1600), 0.5f).build();
 
 }

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "createvehiclesadditional:cast_iron_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "createvehiclesadditional:cast_iron_ingot"
+  }
+}

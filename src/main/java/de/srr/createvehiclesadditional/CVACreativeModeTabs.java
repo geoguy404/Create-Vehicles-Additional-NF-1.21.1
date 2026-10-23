@@ -20,6 +20,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import static de.srr.createvehiclesadditional.content.fluids.pipes.CVAPipes.PIPES;
 
@@ -100,9 +101,21 @@ public class CVACreativeModeTabs {
         private List<Item> collectItems() {
             List<Item> items = new ArrayList<>();
 
+            Set<Item> excludedItems = Set.of(
+                    CVAItems.INCOMPLETE_CAST_IRON_INGOT.get(),
+                    CVAItems.INCOMPLETE_CAST_IRON_SHEET.get()
+                    // weitere Items hier
+            );
+
             // Get all registered items from your Registrate
             for (RegistryEntry<Item, Item> entry : CreateVehiclesAdditional.REGISTRATE.getAll(Registries.ITEM)) {
                 Item item = entry.get();
+
+
+                // Skip items in excludedItems
+                if (excludedItems.contains(item)) {
+                    continue;
+                }
 
                 // Skip block items (already added in blocks section)
                 if (item instanceof BlockItem) {

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "createvehiclesadditional:cast_iron_ingot"
+    },
+    "S": {
+      "item": "createvehiclesadditional:cast_iron_sheet"
+    }
+  },
+  "pattern": [
+    "I I",
+    "ISI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "createvehiclesadditional:steel_mold"
+  }
+}
