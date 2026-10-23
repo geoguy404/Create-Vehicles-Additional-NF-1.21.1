@@ -1,5 +1,6 @@
 package de.srr.createvehiclesadditional;
 
+import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.*;
 
@@ -149,6 +150,21 @@ public class CVAItems {
                 .properties(p -> p.attributes(ShovelItem.createAttributes(CVAToolTiers.CARBON,1.5f,-3.0f)))
                 .lang("Carbon Shovel")
                 .register();
+
+    public static final ItemEntry<Item> STEEL_MOLD = REGISTRATE
+            .item("steel_mold", Item::new)
+            .lang("Steel Mold")
+            .register();
+
+    public static final ItemEntry<SequencedAssemblyItem>
+            INCOMPLETE_CAST_IRON_INGOT = sequencedIngredient("unprocessed_cast_iron_ingot"),
+            INCOMPLETE_CAST_IRON_SHEET = sequencedIngredient("unprocessed_cast_iron_sheet");
+
+
+    private static ItemEntry<SequencedAssemblyItem> sequencedIngredient(String name) {
+        return REGISTRATE.item(name, SequencedAssemblyItem::new)
+                .register();
+    }
 
     public static void register() {
         // Class loading
