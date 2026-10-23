@@ -1,4 +1,4 @@
-package de.srr.createvehiclesadditional.content.steelLadle;
+package de.srr.createvehiclesadditional.content.fluids.steelLadle;
 
 import com.simibubi.create.api.behaviour.movement.MovementBehaviour;
 import com.simibubi.create.content.contraptions.behaviour.MovementContext;

@@ -1,7 +1,7 @@
 package de.srr.createvehiclesadditional;
 
 import de.srr.createvehiclesadditional.content.kinectics.elementSeparator.ElementSeparatorRenderer;
-import de.srr.createvehiclesadditional.content.steelLadle.SteelLadleRenderer;
+import de.srr.createvehiclesadditional.content.fluids.steelLadle.SteelLadleRenderer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;

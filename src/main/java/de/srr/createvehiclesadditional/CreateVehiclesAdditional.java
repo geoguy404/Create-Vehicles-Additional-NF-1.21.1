@@ -1,10 +1,9 @@
 package de.srr.createvehiclesadditional;
 
-import com.simibubi.create.AllBlockEntityTypes;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
-import de.srr.createvehiclesadditional.content.steelLadle.SteelLadleBlockEntity;
+import de.srr.createvehiclesadditional.content.fluids.steelLadle.SteelLadleBlockEntity;
 import net.createmod.catnip.lang.FontHelper;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;

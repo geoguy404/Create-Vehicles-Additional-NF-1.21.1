@@ -1,4 +1,4 @@
-package de.srr.createvehiclesadditional.content.steelLadle;
+package de.srr.createvehiclesadditional.content.fluids.steelLadle;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.simibubi.create.foundation.blockEntity.behaviour.ValueBoxTransform;
