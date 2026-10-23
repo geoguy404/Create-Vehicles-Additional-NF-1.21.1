@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"facing=west":  { "model": "createvehiclesadditional:block/steel_ladle" },
+		"facing=north": { "model": "createvehiclesadditional:block/steel_ladle", "y": 90 },
+		"facing=east":  { "model": "createvehiclesadditional:block/steel_ladle", "y": 180 },
+		"facing=south": { "model": "createvehiclesadditional:block/steel_ladle", "y": 270 }
+	}
+}
+
+

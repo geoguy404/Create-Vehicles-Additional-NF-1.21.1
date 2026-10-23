@@ -23,6 +23,9 @@ public class CVAPartialModels {
     public static PartialModel SEPARATOR_LID1;
     public static PartialModel SEPARATOR_LID2;
 
+    // LADLE
+    public static PartialModel STEEL_LADLE_LEVER;
+
     static {
 
         for (CVAPipes.PipeMaterial material : CVAPipes.PipeMaterial.values()) {
@@ -60,7 +63,8 @@ public class CVAPartialModels {
                 ResourceLocation.fromNamespaceAndPath(CreateVehiclesAdditional.MOD_ID, "block/separator_lid1"));
         SEPARATOR_LID2 = PartialModel.of(
                 ResourceLocation.fromNamespaceAndPath(CreateVehiclesAdditional.MOD_ID, "block/separator_lid2"));
-
+        //LADLE
+        STEEL_LADLE_LEVER = block("steel_ladle_lever");
 
     }
 

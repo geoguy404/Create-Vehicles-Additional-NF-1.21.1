@@ -17,6 +17,7 @@ import com.tterrag.registrate.util.entry.BlockEntityEntry;
 import de.srr.createvehiclesadditional.content.fluids.pipes.CVAPipeBlockEntity;
 import de.srr.createvehiclesadditional.content.fluids.pipes.CVAPipes;
 import de.srr.createvehiclesadditional.content.kinectics.elementSeparator.ElementSeparatorBlockEntity;
+import de.srr.createvehiclesadditional.content.steelLadle.SteelLadleBlockEntity;
 
 import static de.srr.createvehiclesadditional.CreateVehiclesAdditional.REGISTRATE;
 
@@ -28,6 +29,11 @@ public class CVABlockEntities {
             .validBlocks(CVABlocks.ELEMENT_SEPARATOR)
             .register();
 
+    public static final BlockEntityEntry<SteelLadleBlockEntity> STEEL_LADLE =
+            CreateVehiclesAdditional.REGISTRATE
+                    .blockEntity("steel_ladle", SteelLadleBlockEntity::new)
+                    .validBlocks(CVABlocks.STEEL_LADLE)
+                    .register();
 
     public static final BlockEntityEntry<CVAPipeBlockEntity> CVA_PIPE = REGISTRATE
             .blockEntity("cva_pipe", CVAPipeBlockEntity::new)

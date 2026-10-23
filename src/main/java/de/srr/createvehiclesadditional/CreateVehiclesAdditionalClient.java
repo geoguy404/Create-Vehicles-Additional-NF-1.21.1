@@ -1,6 +1,7 @@
 package de.srr.createvehiclesadditional;
 
 import de.srr.createvehiclesadditional.content.kinectics.elementSeparator.ElementSeparatorRenderer;
+import de.srr.createvehiclesadditional.content.steelLadle.SteelLadleRenderer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -34,6 +35,13 @@ public class CreateVehiclesAdditionalClient {
                 CVABlockEntities.ELEMENT_SEPARATOR.get(),
                 ElementSeparatorRenderer::new
         );
+
+        // Steel Ladle
+        event.registerBlockEntityRenderer(
+                CVABlockEntities.STEEL_LADLE.get(),
+                SteelLadleRenderer::new
+        );
+
     }
 
     //setRenderLayer on line 37 is flagged as deprecated (needs to be changed in future)
@@ -52,12 +60,14 @@ public class CreateVehiclesAdditionalClient {
                     CVABlocks.ELEMENT_SEPARATOR.get(),
                     RenderType.cutout()
             );
+
+            ItemBlockRenderTypes.setRenderLayer(
+                    CVABlocks.STEEL_LADLE.get(),
+                    RenderType.cutout()
+            );
+
             //add new Block with transparent Texture here
             //ItemBlockRenderTypes.setRenderLayer(ModBlocks.ELEMENT_SEPARATOR.get(), RenderType.cutout() // oder translucent());
         });
-
-//        event.enqueueWork(() -> {
-//            PonderRegistration.register(); // NEU
-//        });
     }
 }

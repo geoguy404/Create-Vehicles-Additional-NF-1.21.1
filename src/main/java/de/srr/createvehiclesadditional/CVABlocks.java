@@ -1,8 +1,11 @@
 package de.srr.createvehiclesadditional;
 
+import com.simibubi.create.api.behaviour.movement.MovementBehaviour;
 import com.tterrag.registrate.providers.loot.RegistrateBlockLootTables;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import de.srr.createvehiclesadditional.content.kinectics.elementSeparator.ElementSeparatorBlock;
+import de.srr.createvehiclesadditional.content.steelLadle.SteelLadleBlock;
+import de.srr.createvehiclesadditional.content.steelLadle.SteelLadleMovementBehaviour;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -297,7 +300,7 @@ public class CVABlocks {
             .register();
     
 
-//    //------------------KINETIC BLOCKS------------------//
+      //------------------KINETIC BLOCKS------------------//
 public static final BlockEntry<ElementSeparatorBlock> ELEMENT_SEPARATOR = REGISTRATE
         .block("element_separator", ElementSeparatorBlock::new)
         .initialProperties(() -> Blocks.IRON_BLOCK)
@@ -305,6 +308,17 @@ public static final BlockEntry<ElementSeparatorBlock> ELEMENT_SEPARATOR = REGIST
         .blockstate((ctx, prov) -> {})
         .simpleItem()
         .register();
+
+      //------------------FLUID BLOCKS------------------//
+      public static final BlockEntry<SteelLadleBlock> STEEL_LADLE = REGISTRATE
+              .block("steel_ladle", SteelLadleBlock::new)
+              .initialProperties(() -> Blocks.IRON_BLOCK)
+              .properties(p -> p.strength(4f).noOcclusion().sound(SoundType.NETHERITE_BLOCK))
+              .onRegister(MovementBehaviour.movementBehaviour(new SteelLadleMovementBehaviour()))
+              .blockstate((ctx, prov) -> {})
+              .simpleItem()
+              .register();
+
 
     public static void register() {
         // nur zum Classloading
